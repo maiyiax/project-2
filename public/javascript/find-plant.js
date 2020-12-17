@@ -22,8 +22,7 @@ const getPlants = () => {
 }
 
 // capture filter criteria
-// work in progress
-function plantFilterHandler(event) {
+function searchCriteriaHandler(event) {
     event.preventDefault()
 
     search = document.getElementById('#plant-filters').value
@@ -49,5 +48,5 @@ const displayPlants = (filtered) => {
 // call getPlants to store data
 getPlants()
   
-document.querySelector('.plant-filter').addEventListener('click', plantFilterHandler)
+document.querySelector('.plant-filter').addEventListener('click', searchCriteriaHandler)
 document.querySelector('.search-plant').addEventListener('click', filterPlantsHandler)
