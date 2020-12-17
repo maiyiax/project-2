@@ -1,34 +1,53 @@
+const resultsEl = document.getElementById('#results')
+
 // store plants database in array to be filtered
 let plants = []
+// array to store search criteria
+let criteria = []
 
 // calls database when page is loaded to store plant information in array
-async function getPlants() {
-    const response = await fetch(`/api/plants`, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
+const getPlants = () => {
+    fetch(`/api/plants`)
+    .then((response) => {
+        if (response.ok) {
+            response.json().then((data) => {
+                console.log(data)
+                plants.push(data)
+            })
+        } 
     })
-
-    if (response.ok) {
-        console.log(response)
-        plants.push(response)
-    } else {
-        alert(response.statusText)
-    }
+    .catch(err => {
+        console.log(err)
+    })
 }
 
-// filter results based on search criteria
-// broken function / work in progress
+// capture filter criteria
+// work in progress
 function plantFilterHandler(event) {
     event.preventDefault()
 
-    let criteria = []
+    search = document.getElementById('#plant-filters').value
+    criteria.push(search)
+}
 
-    let filtered = plants.filter(plant => criteria(plant))
+// filter results of search
+// work in progress
+function filterPlantsHandler(event) {
+    event.preventDefault()
 
-    document.getElementById('result').innerHTML = filtered;
+    let filtered = plants[0].filter(plant => criteria.test(plant))
+
+    displayPlants(filtered)
+}
+
+// display results of search
+// work in progress
+const displayPlants = (filtered) => {
+    resultsEl.innerHTML = filtered
 }
 
 // call getPlants to store data
 getPlants()
   
 document.querySelector('.plant-filter').addEventListener('click', plantFilterHandler)
+document.querySelector('.search-plant').addEventListener('click', filterPlantsHandler)
