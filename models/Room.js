@@ -13,7 +13,16 @@ Room.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
+        },
+        room_name: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
+        // ****May incorporate later****
+        // light_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // }
     },
     {
         sequelize,
