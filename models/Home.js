@@ -12,7 +12,8 @@ Home.init(
             autoIncrement: true
         },
         home_name: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
@@ -21,13 +22,13 @@ Home.init(
                 key: 'id'
             }
         },
-        room_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'room',
-                key: 'id'
-            }
-        }
+        // room_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'room',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,

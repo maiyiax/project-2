@@ -9,11 +9,11 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 1,
-        water: 'weekly' 
+        water: 'weekly'
     },
     {
         common_name: "Elephant's Ear",
-        scientific_name:'Alocasia',
+        scientific_name: 'Alocasia',
         image_url: 'https://www.ourhouseplants.com/imgs-content/Alocasia-leaves.jpg',
         description: "An Alocasia plant, native to Asia, is also called an Elephant Ear plant or African Mask plant because of their very large,  glossy, heart-shaped leaves with wavy edges. These stunning, veined leaves come in red, bronze, blue-green, and purple. If you are searching for a dramatic, very different looking plant that can be as small as 6″ or as tall as a tree, an Alocasia plant is a great choice. These plants do require extra care and attention. Alocasia plants are considered poisonous and should be kept away from pets and children.",
         care_level: 'difficult',
@@ -23,7 +23,7 @@ const plantdata = [
     },
     {
         common_name: 'Flamingo Flower',
-        scientific_name:'Anthurium',
+        scientific_name: 'Anthurium',
         image_url: 'https://kalamazooflorist.imgix.net/images/itemVariation/anthuriuminapot1-20072241019.jpeg',
         description: 'Also referred to as "Laceleaf", the names refer to the structure of the flower. These easy-care indoor plants produce beautiful, long-lasting, waxy, heart- shaped “flowers” which are really modified leaves called “spathes” throughout the year.  Anthurium spathes come in red, pink, white, and salmon and can be used in cut flower arrangements. Anthurium plants look beautiful as table centerpieces or on a reception desk in an office. These plants are poisonous and should be kept away from pets and children.',
         care_level: 'easy',
@@ -66,7 +66,7 @@ const plantdata = [
         scientific_name: 'Aspidistra',
         image_url: 'https://smartgardenguide.com/wp-content/uploads/2020/10/cast-iron-plant-care-aspidistra-elatior-6.jpg',
         description: 'A Cast Iron plant, native to China, is an almost indestructible easy-care plant that survives where other houseplants quickly die. Water it or forget to water it, good light or poor light, warm room or cold room, the Cast Iron plant survives. This is a rather plain plant with 2ft. long, pointed, course textured, leathery leaves that emerge directly from the soil. The variegated varieties of a Cast Iron plant have a cream-colored stripe down each of the leaves that reverts to solid green in very low light.',
-        care_level: 'easy', 
+        care_level: 'easy',
         toxicity: 0,
         // light_id: 2,
         water: 'bi-weekly',
@@ -106,7 +106,7 @@ const plantdata = [
         scientific_name: 'Chamaedorea elegans',
         image_url: 'https://smartgardenguide.com/wp-content/uploads/2019/05/how-to-care-for-a-parlor-palm-chamaedorea-elegans-12-734x506.jpg',
         description: 'This compact, dark green, indoor palm with long graceful fronds is a fabulous green friend that does well in almost all locations. A Parlor Palm can be small enough to use in a terrarium or tall enough to sit on the floor. In a 6” pot it makes a perfect table plant. When a Parlor Palm is planted in a 10” pot, it can grow up to 4ft. tall. Since these palms require very little care, it is the perfect plant for offices, businesses, and for less than optimal growing conditions in homes.',
-        care_level: 'easy', 
+        care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
         water: 'bi-weekly'
@@ -133,7 +133,7 @@ const plantdata = [
     },
     {
         common_name: 'Cyclamen',
-        scientific_name:'Cyclamen',
+        scientific_name: 'Cyclamen',
         image_url: 'https://assets.eflorist.com/assets/products/PHR_/T91-1A.jpg',
         description: 'There are over 20 species of cyclamen plants native to North Africa and the Mediterranean. The best variety to use as an indoor plant is the cyclamen “persicum”. Cyclamen are compact table plants that produce butterfly-like flowers atop tall upright stems. The flowers come in red, white, pink, and lavender and have a pleasant sweet smell. The distinctive leaves of a cyclamen are heart shaped and marked with a silver design. These relatively small plants, growing only 8”-10” in height, are popular gifts for Thanksgiving, Christmas, and Valentine’s Day. These little gems grow and re-bloom as indoor houseplants for several years.',
         care_level: 'easy',
@@ -372,14 +372,14 @@ const plantdata = [
         water: 'bi-weekly'
     },
     {
-        common_name: 'Aloe vera', 
-        scientific_name: 'Aloe vera', 
+        common_name: 'Aloe vera',
+        scientific_name: 'Aloe vera',
         image_url: 'https://s7d1.scene7.com/is/image/terrain/53770426_000_a?$zoom2$',
         description: 'An Aloe Vera plant is an easy care, drought resistant succulent that can be grown indoors or outdoors. Medicine Plant is its nickname because the sap from its leaves soothes minor skin irritations and burns; this makes it a  great plant for a sunny kitchen. An Aloe Vera plant has long, narrow, plump leaves with little spikes along the edges so be very careful when handling it. It can be used as a table plant when small or a floor plant as it matures.',
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'     
+        water: 'bi-weekly'
     },
     {
         common_name: 'Prickly Pear',
@@ -403,16 +403,16 @@ const plantdata = [
     },
     {
         common_name: 'Moon Cactus',
-        scientific_name: 'Gymnocalycium mihanovichii', 
+        scientific_name: 'Gymnocalycium mihanovichii',
         image_url: 'https://img.plantsam.com/wp-content/uploads/2014/06/Gymnocalycium-mihanovichii.jpg',
         description: 'This cute “mutant” cactus is actually a combination of two cacti, typically Gymnocalycium (the sicon) and a rootstock cactus, such as Hylocereus. The term “moon cactus” typically refers to the yellow and orange varieties, however red varieties can be included.',
         care_level: 'easy',
         toxicity: 0,
         // light_id: 2,
-        water: 'bi-weekly' 
+        water: 'bi-weekly'
     },
     {
-        common_name: 'Jade Plant',    
+        common_name: 'Jade Plant',
         scientific_name: 'Crassula ovata',
         image_url: 'https://cdn11.bigcommerce.com/s-x68mczjd0x/images/stencil/1280x1280/products/840/782/CRASSULAOVATA1GRULER__11234.1560536907.jpg?c=2',
         description: 'A Jade plant, sometimes called a Friendship plant, Lucky plant, or Money Tree plant, is a green friend that just won’t die! It’s a perfect table plant or short bushy floor plant for a sunny hot location. Jade plants are succulent houseplants with numerous thick, leathery, green leaves growing in clumps on thick stems. Some jade plant varieties develop red edges on their leaves when exposed to bright sunlight. A jade plant is native to the dry hills of South Africa, so it is very drought resistant. This compact sturdy plant produces tiny pink or white star-shaped flowers, not in the summer like most plants, but around Christmas. Jade plants are one of the easiest houseplants to propagate either by stem cuttings or by stray leaves that fall into the soil.',
@@ -448,6 +448,206 @@ const plantdata = [
         description: 'The Strawberry Begonia plant, or Strawberry Geranium as it is sometimes called, is neither a begonia nor a geranium, but rather a member of the Saxifrage family. It does have bluish-green, fuzzy leaves like those of a begonia and it does spread by sending out “stolen” or “runners” like a strawberry plant; but a Strawberry Begonia is really an evergreen native to Asia and a close relative of the Piggyback plant. A Strawberry Begonia produces a lovely, white flower with pointed petals and a bright, yellow center. Like a strawberry plant, new babies develop at the ends of each of the “stolen.” Indoors or on your porch a Strawberry Begonia makes a beautiful hanging plant. Outdoors it can also be an excellent ground cover in your garden.',
         care_level: 'average',
         toxicity: 0,
+        // light_id: 3,
+        water: 'weekly'
+    },
+    {
+        common_name: "Azalea",
+        scientific_name: "Rhododendron",
+        image_url: 'https://www.avasflowers.net/img/prod_img/avasflowers-pretty-potted-pink-azalea-planter.jpg',
+        description: 'Azaleas, the national flower of Nepal, are part of an ancient group of plants dating back million of years. They are related to rhododendrons and blueberries and are descendents of Asian shrubs. Azaleas can also be used as a centerpiece for weddings or to replace expensive cut flower arrangements in your home or office. These plants have terminal blooms which means the entire plant flowers at one time, making a beautiful display. Since florist azalea plants are different than outdoor azalea plants, indoor azaleas rarely do well planted in your garden.',
+        care_level: 'easy',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'twice-weekly'
+    },
+    {
+        common_name: "Baby's Tear's Plant",
+        scientific_name: "Soleirolia",
+        image_url: 'https://www.gardenloversclub.com/wp-content/uploads/2019/09/babys-tears-in-pot.jpg',
+        description: "Baby's tears is a mat-forming tropical perennial that makes for an eye-catching specimen for indoor terrariums and hanging baskets. What makes baby's tears plants so special are the myriad tiny leaves, which form a dense mat suggestive of a gnome's green paradise. Although baby's tears plants are easy for beginners, they require regular attention to look their best.",
+        care_level: 'difficult',
+        toxicity: 0,
+        // light_id: 3,
+        water: 'twice-weekly'
+    },
+    {
+        common_name: "Bird of Paradise",
+        scientific_name: "Strelitzia",
+        image_url: 'https://img.crocdn.co.uk/images/products2/pl/20/00/03/35/pl2000033579_card3_lg.jpg',
+        description: 'An indoor Bird of Paradise is a slow growing plant with large paddle- shaped leaves that resemble those of a banana plant. Even indoors, a Bird of Paradise plant can easily reach a height of 6ft-7ft. This plant produces multiple large, leathery leaves sometimes 3ft or more in length. After 4 or 5 years, an indoor Bird of Paradise (Strelitzia Reginae) may, on rare occasions, produce an exotic orange/red flower that resembles the head of a crane. The Strelitzia Nicolai or White Bird of Paradise produces a blue/white version of this flower. Flower production is much more frequent when a Bird of Paradise is used as an outdoor plant.',
+        care_level: 'difficult',
+        toxicity: 1,
+        // light_id: 4,
+        water: 'weekly'
+    },
+    {
+        common_name: "Bleeding-Heart Vine",
+        scientific_name: "Clerodendrum thomsoniae",
+        image_url: 'https://cdn.shopify.com/s/files/1/0067/9346/1858/products/IMG_8661_740x.jpg?v=1603962309',
+        description: 'A Bleeding Heart Vine Plant, native to tropical west Africa, is grown for its masses of beautiful bi-colored flowers. Each flower on a Bleeding Heart Vine is made up of a corolla or inner group of bright red petals that emerge from a white calyx or outer part of the flower. The Bleeding Heart Vine’s nickname, the “Bag Plant” refers to the shape of the outer white petals. When planted in a container, a Bleeding Heart Vine can grow up to 3 feet in length, outside in tropical areas, it often reaches 15 feet. A Bleeding Heart Vine has twining stems with large attractive dark green leaves. You can place a trellis in your container to help a Bleeding Heart Vine grow tall or place it on a shelf or in a hanging basket.',
+        care_level: 'average',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'weekly'
+    },
+    {
+        common_name: "Guzmania",
+        scientific_name: "Guzmania",
+        image_url: 'https://cdn.shopify.com/s/files/1/1941/1701/products/Bromeliad_Guzmania_500x.jpg?v=1594132742',
+        description: 'Guzmania bromeliads are wonderfully stunning tabletop plants. They feature long, narrow, shiny green leaves that arise from a deep central cup. The plants are somewhat taller than many bromeliads. Their large and showy flower bracts arise in the summer in an amazing array of colors. Guzmania are not difficult bromeliads to grow, and they will reward you with many weeks of color with little or no effort.',
+        care_level: 'easy',
+        toxicity: 0,
+        // light_id: 2,
+        water: 'bi-weekly'
+    },
+    {
+        common_name: "Calla Lily",
+        scientific_name: "Zantedeschia aethiopica",
+        image_url: 'https://i.pinimg.com/originals/85/39/fe/8539fe6078addc2f637fadfdbe278cfb.jpg',
+        description: 'The Calla Lily is a beautiful plant whether grown outdoors or indoors in a decorative pot by a sunny window. This elegant plant, native to the marshes of South Africa, is not really a lily at all but a member of the Araceae family. The extraordinary funnel or trumpet shaped waxy flowers of a Calla Lily, grow on tall thick stems and have a yellow spadix emerging from their center. The long tapered green leaves of the plant may be streaked with faint white or yellow spots. Today, thanks to the many new hybrids developed by breeders throughout the world, Calla Lilies can be found not only in white, but also pink, orange, fuchsia, red, yellow, and cream. The long lasting flowers are popular in wedding bouquets where they are a symbol of purity and beauty.',
+        care_level: 'average',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'daily'
+    },
+    {
+        common_name: "Cat Palm",
+        scientific_name: "Chamaedorea cataractarum",
+        image_url: 'https://mcnamaraflorist.imgix.net/images/itemVariation/cat-palm-20032472405.jpg?auto=format&w=375&h=450&fit=crop',
+        description: 'The Cat Palm, also called the Cascade or Cataract Palm, is native to southeastern Mexico and resembles the inexpensive Areca Palm and the very pricey Kentia Palm. Indoors the plant grows slowly, eventually reaching a height of 4-6ft. Although this plant looks beautiful in the plant nursery, it often deteriorates once you bring it home. It requires a very tropical environment, bright indirect light, and plenty of water. This is a very attractive plant that produces glossy, dark green leaves on thin shoots, but it is a challenging plant that needs attention.',
+        care_level: 'difficult',
+        toxicity: 0,
+        // light_id: 3,
+        water: 'weekly'
+    },
+    {
+        common_name: "Chrysanthemums",
+        scientific_name: "Chrysanthemums",
+        image_url: 'https://plantingman.com/wp-content/uploads/2017/02/Chrysantheium-plant.jpg',
+        description: 'A Chrysanthemum is really an outdoor plant that has become a popular floral gift and flowering plant for home and office. It is second only to the rose as the most popular cut flower in the world. Mums are members of the Asteraceae Family which includes over 20,000 flowering species. Chrysanthemums were brought to Japan by Buddhist Monks in 400 AD and have remained a very important part of Japanese culture to this day. Mums last 3-4 weeks indoors with very little care and in almost any environment before needing to be replaced. The blooms which come in various shapes and colors can be daisy-like, pom-poms, or buttons, and may be yellow, burgundy, pink, or white. NASA has listed the Chrysanthemum as a plant that cleans the air of benzene, formaldehyde, and carbon monoxide. You may also enjoy sipping Chrysanthemum tea to relax.',
+        care_level: 'easy',
+        toxicity: 1,
+        // light_id: ,
+        water: 'weekly'
+    },
+    {
+        common_name: "Cineraria",
+        scientific_name: "Pericallis Cruenta",
+        image_url: 'https://media.bunnings.co.nz/Product-384x384/3f79f18b-c2ee-4ac9-a901-3d084a040a37.jpg',
+        description: 'Cineraria plants are beautiful small flowering plants that are available for purchase during the late winter and early spring. The compact Cineraria plant has tight bunches of petite daisy like flowers surrounded by large dark green leaves. Cineraria flowers can be red, white, blue, or purple. Each Cineraria flower has an “eye” in the middle surrounded by a small white ring. Cineraria plants reach a maximum height of 15-20 inches. Cineraria plants are very fragile perennial plants so they are mostly used as outdoor annuals or indoor gift plants that bloom for only about a month. Once the flowers of a Cineraria plant die, it’s time to throw it out or plant it outside. Be sure that there are plenty of  buds when you purchase a Cineraria plant so it can bloom for as long as possible.',
+        care_level: 'difficult',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'weekly'
+    },
+    {
+        common_name: "Kaffir Lily",
+        scientific_name: "Clivia miniata",
+        image_url: 'https://i.pinimg.com/originals/73/7d/5a/737d5a88db590b7acfc4687de326b8cc.jpg',
+        description: 'Clivia plants, close relatives of Amaryllis plants, are easy- care almost indestructible flowering plants from South Africa. Named after a Duchess belonging to the Clive family, Clivias have long, thick, dark-green arching leaves growing out of a large plant bulb. The trumpet or lily- shaped flowers are 2″-3″ in size and can be orange, orange/red, yellow, or cream colored. Clivia flowers appear as a dense cluster of 15-20 small blooms at the end of a long stem. Clivia plants bloom for about 4 weeks during the late spring and early summer when the weather is warm and the days are long. Clivias are large plants that can grow 2-3 feet tall and almost as wide. Planting a Clivia in a heavy clay or ceramic pot prevents it from tipping over. The older a Clivia plant gets the more beautiful it becomes',
+        care_level: 'easy',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'bi-weekly'
+    },
+    {
+        common_name: "Coleus",
+        scientific_name: "Solenostemon",
+        image_url: 'https://c8.alamy.com/comp/XBA9TH/two-coleus-in-flowerpots-solenostemon-scutellarioides-XBA9TH.jpg',
+        description: 'Coleus is a fast- growing, hanging houseplant that comes in over 100 different leaf colors, textures, shapes, & designs. It is a member of the mint family. These plants were very popular during the Victorian era but fell out of favor for a while because of the poor plant quality being sold. Today a coleus plant is once again very popular both as an indoor and as an outdoor plant. The colors on the leaves may be a mixture of lavender, cream, pink, maroon, yellow, red, bronze, and various shades of green. The color patterns can be marbled, stripped, or dappled. If you have a very bright area in your home that calls for a hanging plant, then a coleus is perfect for you.',
+        care_level: 'average',
+        toxicity: 0,
+        // light_id: 4,
+        water: 'twice-weekly'
+    },
+    {
+        common_name: "Brazilian Snow Plant ",
+        scientific_name: "Ctenanthe Lubbersiana",
+        image_url: 'https://plantingman.com/wp-content/uploads/2019/05/Ctenanthe-lubbersiana-%E2%80%98Golden-mosaic%E2%80%99.jpg',
+        description: 'Ctenanthe, native to tropical Brazil, is a member of the Marantaceae family and is related to the calathea and prayer plant. These evergreen perennials are grown primarily for the beauty of their colorful leaves. C. lubbersiana reaches a height of about 18 inches and has green and yellow patterned elliptical leaves with pale green undersides. A Ctenanthe is not an easy care plant and can be quite frustrating for a novice plant grower.',
+        care_level: 'difficult',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'daily'
+    },
+    {
+        common_name: "Desert Rose",
+        scientific_name: "Adenium obesum",
+        image_url: 'https://5.imimg.com/data5/TM/HJ/MY-38022806/adenium-desert-rose-plant-500x500.jpg',
+        description: 'A Desert Rose plant is a unique looking succulent native to the semi-arid regions of Arabia and the eastern and western parts of Africa. This plant is a type of caudiciform or “fat plant” because of its thick bulbous base. When grown indoors, a desert rose can be 2ft-5ft tall and 1ft-3 ft wide. Desert rose plants have beautiful flowers and sparse small leaves. The 1″-2″ saucer shaped blooms are quite a conversation piece and can be red, pink, or white. The fat, bulbous trunk is partially or completely buried in the soil. This is one of my favorite indoor flowering plants because it is so unusual and thrives on neglect.',
+        care_level: 'easy',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'bi-weekly'
+    },
+    {
+        common_name: "Donkey's Tail",
+        scientific_name: "Sedum Morganianum",
+        image_url: 'https://i.pinimg.com/originals/8e/9c/56/8e9c568a9e41081966e4cf569f6b7ef1.jpg',
+        description: 'A Donkey’s Tail plant (Sedum Morganianum), sometimes called Burro’s Tail plant, is an easy-care Succulent Plant native to Mexico. This very attractive and unique looking plant has long hanging stems covered in thick heavy blue-green leaves that overlap like the hair on a donkey’s tail. A Donkey’s Tail plant is very fragile and the leaves easily fall off if the plant is disturbed. These plants do well in hanging baskets where stems have lots of room to cascade down & no one can bump into it. Under the right conditions, a Donkey’s Tail plant may produce star-shaped flowers in pink, red, or lavender during the spring and summer.',
+        care_level: 'easy',
+        toxicity: 0,
+        // light_id: 4,
+        water: 'bi-weekly'
+    },
+    {
+        common_name: "Emerald Gem",
+        scientific_name: "Homalomena",
+        image_url: 'https://i.pinimg.com/474x/d9/57/90/d95790293bfd204b5ee94578c59b1147.jpg',
+        description: 'An Emerald Gem plant or Homalomena, native to tropical Asia and South America, is an upright plant with dark green, waxy, spade-shaped leaves. Since these plants are usually about 12″-30″ tall, it makes them ideal for areas with height restrictions. Although an Emerald Gem plant is a relative of the easy-care philodendron, it is a bit more finicky and requires more attention. However, if you are tired of the same old houseplants, an Emerald Gem plant makes a nice addition to your plant collection.',
+        care_level: 'difficult',
+        toxicity: 0,
+        // light_id: 3,
+        water: 'weekly'
+    },
+    {
+        common_name: "Paperplant",
+        scientific_name: "Fatsia Japonica",
+        image_url: 'https://cdn.shopify.com/s/files/1/0253/6701/9565/products/Fatsia-Japonica-Camoflauge-11_1000x1000.jpg?v=1606044970',
+        description: 'The fatsia japonica plant, or Japanese aralia, originated in the sub-tropic forests of Japan, Korea, & Taiwan. Fatsia plants are a type of evergreen plant that can be grown both indoors as a houseplant and outdoors in frost-free areas. A fatsia plant has shiny, leathery, medium green palmate (hand-shaped) leaves that grow at the ends of stiff stems. Fatsia plants are compact upright plants that can grow up to 6ft. tall even indoors. Prune a fatsia aggressively to help keep the growth under control and the shape attractive.',
+        care_level: 'average',
+        toxicity: 0,
+        // light_id: 3,
+        water: 'weekly'
+    },
+    {
+        common_name: "Fiddle leaf fig",
+        scientific_name: "Ficus lyrata",
+        image_url: 'https://i.pinimg.com/originals/5e/38/79/5e3879e4af262bbd7c5658485fb20e61.jpg',
+        description: 'A Ficus Lyrata, or as it’s commonly called a Fiddle Leaf Fig plant, has large wide leathery leaves that resemble a violin or fiddle. These dark green, hard leaves are over a foot long  and grow on woody stems. The Ficus Lyrata, native to Australia, Melanesia, and Southern Asia, is one of the easier ficus trees to care for. It can be small enough to use as a table plant or large enough to be used as an indoor tree.',
+        care_level: 'average',
+        toxicity: 1,
+        // light_id: 3,
+        water: 'bi-weekly'
+    },
+    {
+        common_name: "Lucky Bamboo",
+        scientific_name: "Dracaena sanderiana",
+        image_url: 'https://www.trees.com/sites/default/files/field/image/Lucky-Bamboo-Tree_0.jpg',
+        description: 'A Lucky Bamboo plant is really made up of the cut stalks of a Dracaena Sanderiana and is native to West Africa and Eastern Asia. The Lucky Bamboo stalks are usually between 4″- 24″in height. Followers of Feng Shui believe that the Lucky Bamboo plant brings prosperity and good fortune to a home or business. If the Lucky Bamboo arrangement has three stalks it brings happiness, five stalks bring wealth, and six stalks bring health. Four stalks are never allowed  since the word four in Chinese sounds too close to the Chinese word for death. If you buy Lucky Bamboo stalks loose and not planted, be sure to keep them in water until you have permanently placed them in a vase or decorative container. If you purchase multiple Lucky Bamboo stems that are tied together, do not remove the ties, this stabilizes the plant. Lucky Bamboo plants require very little care and grow practically anywhere as long as you keep the water clean and chemical free.',
+        care_level: 'easy',
+        toxicity: 1,
+        // light_id: 2,
+        water: 'monthly'
+    },
+    {
+        common_name: "Moses in the cradle",
+        scientific_name: "Tradescantia spathacea",
+        image_url: 'https://www.logees.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/1/r1934-4-large.jpg',
+        description: 'Moses in the Cradle plants (Tradescantia spathacea) have many alternative names such as Moses-in-a-Boat, Boat Lily, Cradle Lily, Moses-in-the-Bullrushes, and Oyster plant. Whatever you want to call them, these colorful plants, native to Mexico, the West Indies, and Central America, are easy to care for and have very attractive leaves. Moses In the Cradle plants produce rosettes of long, waxy, sword-shaped leaves that are glossy green or green, purple, and white striped on top and a rich purple on the underside. The very small white flowers, tucked away in a purple boat shaped bract, give Moses-in-the-Cradle Houseplants their many common names.',
+        care_level: 'easy',
+        toxicity: 1,
+        // light_id: 4,
+        water: 'weekly'
+    },
+    {
+        common_name: "Poinsettia",
+        scientific_name: "Euphorbia pulcherrima",
+        image_url: 'https://i.pinimg.com/originals/c0/ec/44/c0ec4422e346897b83aeb0bd9fe114a5.jpg',
+        description: 'A Poinsettia plant, native to Mexico, is the most popular indoor flowering plant sold in the U.S. even though it is only available six weeks of the year. The colorful parts of a poinsettia are really modified leaves called bracts. Many people mistakenly think the bracts are the flower petals of the plant. Although these bracts are quite attractive they are not part of the flowers. The real flowers are quite inconsequential and are located inside the small yellow part of the poinsettia called a cyathia. There is a cyathia in the center of each group of bracts. Selecting the right poinsettia is the key to having a plant that stays colorful and beautiful the entire holiday season.',
+        care_level: 'easy',
+        toxicity: 1,
         // light_id: 3,
         water: 'weekly'
     }
