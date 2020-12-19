@@ -68,6 +68,13 @@ Plant.init(
                 model: 'user',
                 key: 'id'
             }
+        },
+        room_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'room',
+                key: 'id'
+            }
         }
     },
     {
