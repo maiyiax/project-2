@@ -25,7 +25,7 @@ const getPlants = () => {
 function searchCriteriaHandler(event) {
     event.preventDefault()
 
-    search = document.getElementById('#plant-filters').value
+    let search = document.getElementById('#plant-filters').value
     criteria.push(search)
 }
 
