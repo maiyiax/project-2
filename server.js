@@ -1,54 +1,44 @@
-const express = require('express');
-const routes = require('./controllers');
-const sequelize = require('./config/connection');
-const path = require('path');
-const session = require('express-session');
-const exphbs = require('express-handlebars');
-const hbs = exphbs.create({})
+const path = require("path");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
 
-// env destructure
-require('dotenv').config()
-const { SECRET } = process.env
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-const app = express()
-const PORT = process.env.PORT || 3001
+const sequelize = require("./config/connection"); 
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// connect session to sequelize
-const SequelizeStore = require('connect-session-sequelize')(session.Store)
 const sess = {
-    secret: SECRET,
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-        db: sequelize
-    })
-}
+  secret: "Super secret secret",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
-// middleware
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(session(sess))
+app.use(session(sess));
 
-app.use(routes)
-
-
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main',
-    layoutsDir: path.join(__dirname, 'views/layouts')
-}));    
-app.set('view engine', 'handlebars')
-
-//routing
-app.get('/',(req,res) => {
-    res.render('main');
-});
-app.get('/dashboard',(req,res) => {
-    res.render('dashboard');
+const hbs = exphbs.create({
+  helpers: {
+    format_date: date => {
+      return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+    }
+  }
 });
 
-// connect to server and database
-sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening',))
-})
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use(require('./controllers/'));
+
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}!`);
+  sequelize.sync({ force: false });
+});
