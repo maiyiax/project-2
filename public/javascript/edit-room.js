@@ -2,7 +2,7 @@
 async function editRoomHandler(event) {
     event.preventDefault()
   
-    const light_level = document.querySelector('input[name="light-level"]').value.trim()
+    const last_watered = document.querySelector('input[name="last-watered"]').value.trim()
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ]
@@ -10,7 +10,7 @@ async function editRoomHandler(event) {
     const response = await fetch(`/api/rooms/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
-            light_level
+            last_watered
         }),
         headers: {
             'Content-Type': 'application/json'
