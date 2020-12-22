@@ -38,6 +38,21 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(require('./controllers/'));
 
+app.get('/addPlant', (req, res) => {
+  // Handlebars requires an object to be sent to the index.handlebars file.
+  const data = {
+    plantdata: []
+  };
+
+  // Loop through the plantdata, and send to add plant handlebars
+  for (let i = 0; i < plantdata.length; i++) {
+
+  }
+
+  res.render('addPlant', data);
+});
+
+
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
   sequelize.sync({ force: false });
