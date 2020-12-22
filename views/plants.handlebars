@@ -1,11 +1,10 @@
 <div class="post card">
   <div class="card-header">
-    <h2>Plants</h2>
+      <h2>Plants</h2>
+    <ul class="plant list">
+      {{#each plantData}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>  
   </div>
-<ul>
-{{#each plant}}
-    <li>{{.}}</li>
-{{/each}}
-</ul>
-
-<script src="/javascript/edit-plant.js"></script>
+</div>
