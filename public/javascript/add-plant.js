@@ -1,14 +1,14 @@
 async function newPlantHandler(event) {
     event.preventDefault()
   
-    const plant_name = document.querySelector('input[name="plant-name"]').value
-    const room_id = document.querySelector('input[name="room-id]').value
+    const user_id = ''
+    const plant_id = document.querySelector('input[name="room-id]').value
   
     const response = await fetch(`/api/plants`, {
         method: 'POST',
         body: JSON.stringify({
-            plant_name,
-            room_id
+            user_id,
+            plant_id
         }),
         headers: {
             'Content-Type': 'application/json'
