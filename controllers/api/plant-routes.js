@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { User, Plant, Room } = require('../../models')
 
 // get all plants
-router.get('/', (req, res) => {
+router.get('/plants', (req, res) => {
     Plant.findAll({
 
     })

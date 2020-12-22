@@ -15,7 +15,7 @@
     background-color: var(--primary);
     margin: 0;
     padding: 0;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "Annie Use Your Telescope";
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
@@ -81,14 +81,14 @@
     color: var(--primary);
     border: none;
     outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--dark);
+    background-color: var(--dark);
+    box-shadow: 3px 3px var(--secondary);
     transform: translate(-1px, -1px);
   }
   
   .btn:hover {
     color: var(--primary);
-    background-color: var(--aqua);
+    background-color: var(--light-dark);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
   }
