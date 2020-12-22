@@ -7,31 +7,31 @@ const session = require('express-session');
 // const hbs = exphbs.create({})
 
 // env destructure
-require('dotenv').config()
-const { SECRET } = process.env
+// require('dotenv').config()
+// const { SECRET } = process.env
 
-const app = express()
-const PORT = process.env.PORT || 3001
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 // connect session to sequelize
-const SequelizeStore = require('connect-session-sequelize')(session.Store)
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
-    secret: SECRET,
+    secret: 'secret word',
     cookie: {},
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize
     })
-}
+};
 
 // middleware
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static(path.join(__dirname, 'public')))
-app.use(session(sess))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(sess));
 
-app.use(routes)
+app.use(routes);
 
 // template language engine
 // app.engine('handlebars', hbs.engine)
@@ -39,5 +39,5 @@ app.use(routes)
 
 // connect to server and database
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening'))
-})
+    app.listen(PORT, () => console.log('Now listening'));
+});

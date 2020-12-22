@@ -23,9 +23,9 @@ Home.hasMany(Room, {
 
 // });
 
-// Room.belongsTo(User, {
-
-// });
+Room.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 
 Room.hasMany(Plant, {
     foreignKey: 'room_id'
