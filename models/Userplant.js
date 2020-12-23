@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require('sequelize')
-const sequelize = require('../config/connection')
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-class Home extends Model { }
+class Userplant extends Model {}
 
-Home.init(
+Userplant.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,22 +11,19 @@ Home.init(
             primaryKey: true,
             autoIncrement: true
         },
-        home_name: {
-            type: DataTypes.STRING,
-            allowNull: true
+        plant_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'plant',
+                key: 'id'
+            } 
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'user',
-                key: 'id'
-            }
-        },
-        room_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'room',
                 key: 'id'
             }
         }
@@ -36,8 +33,8 @@ Home.init(
         timestamps: false,
         freezeTableName: true,
         underscore: true,
-        modelName: 'home'
+        modelName: 'userplant'
     }
-)
+);
 
-module.exports = Home;
+module.exports = Userplant;

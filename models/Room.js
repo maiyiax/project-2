@@ -17,12 +17,16 @@ Room.init(
         room_name: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
         // ****May incorporate later****
         // light_id: {
         //     type: DataTypes.INTEGER,
         //     allowNull: false
         // }
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
     },
     {
         sequelize,

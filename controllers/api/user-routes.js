@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
     })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
-        console.log(err)
-        res.status(500).json(err)
+        console.log(err);
+        res.status(500).json(err);
     })
 })
 
@@ -23,11 +23,20 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Plant,
-                attributes: []
+                attributes: [
+                    'id',
+                    'common_name',
+                    'scientific_name',
+                    'image_url',
+                    'description',
+                    'care_level',
+                    'toxicity',
+                    'water'
+                ]
             },
             {
                 model: Room,
-                attributes: []
+                attributes: ['id', 'room_name']
             }
         ]
     })
@@ -64,7 +73,7 @@ router.post('/', (req, res) => {
     })
 })
 
-// login validation
+// login validation 
 router.post('/login', (req, res) => {
     User.findOne({
         where: {

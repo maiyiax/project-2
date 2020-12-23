@@ -1,9 +1,9 @@
 const router = require('express').Router()
-const { User, Home, Room, Plant, UserPlant } = require('../models')
+const { User, Home, Room, Plant, Userplant } = require('../models')
 const withAuth = require('../utils/auth')
 
 router.get('/', withAuth, (req, res) => {
-    UserPlant.findAll({
+    Userplant.findAll({
         attributes: [ 'plant_id' ],
         include: [
             {
@@ -45,7 +45,7 @@ router.get('/', withAuth, (req, res) => {
 })
 
 router.get('/more-info/:id', withAuth, (req, res) => {
-    UserPlant.findOne({
+    Userplant.findOne({
         where: {
             id: req.params.id
         },
