@@ -1,0 +1,40 @@
+<section>
+    <div class="post card">
+        <div class="card-header">
+            <h2>Your Plants</h2>
+        </div>
+        <div class="card-body">
+            {{#if userData.plant_id}}
+            <ol>
+                {{#each userData}}
+                <li>
+                    {{> plants userData}}
+                    <a href="/dashboard/more-info/{{plant_id}}">More Info</a>
+                </li>
+                {{/each}}
+            </ol>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class="post card">
+        <div class="card-header">
+            <div>
+                <h2>Choose a plant:</h2>
+                <input type="text" id="post-title" name="post-title" />
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<script src="/javascript/add-plant.js"></script>
+<script src="/javascript/delete-plant.js"></script>
+{{#if userData.home_id}}
+<script src="/javascript/add-room.js"></script>
+<script src="/javascript/edit-room.js"></script>
+<script src="/javascript/delete-home.js"></script>
+{{else}}
+<script src="/javascript/add-home.js"></script>
+{{/if}}

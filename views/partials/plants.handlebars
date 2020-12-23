@@ -1,13 +1,11 @@
-
-
 <div class="post card">
-  <div class="card-header">
-      <h2>Plants</h2>
-    <ul class="plant list">
-      {{#each plantdata}}
-        <li>{{this}}</li>
-      {{/each}}
-    </ul>  
+    <div class="card-header">
+      <h2>{{common_name}}</h2>
+    </div>
+
+    <div class="card-body">
+      <div><img src="{{image_url}}" alt="{{scientific_name}}"/></div>
+      <div><p>{{description}}</p></div>
+    </div>
   </div>
-</div>
 
