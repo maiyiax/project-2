@@ -22,13 +22,14 @@ Home.init(
                 key: 'id'
             }
         },
-        // room_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'room',
-        //         key: 'id'
-        //     }
-        // }
+        room_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'room',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,

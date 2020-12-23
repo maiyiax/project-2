@@ -7,7 +7,7 @@ async function editPlantHandler(event) {
       window.location.toString().split('/').length - 1
     ]
 
-    const response = await fetch(`/api/plants/${id}`, {
+    const response = await fetch(`/api/userplants/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             room_id

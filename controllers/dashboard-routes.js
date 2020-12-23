@@ -23,12 +23,20 @@ router.get('/', withAuth, (req, res) => {
                     model: Room,
                     attributes: [ 'id', 'room_name' ]
                 }
+            },
+            {
+                model: Home,
+                attributes: [ 'id', 'home_name', 'room_id' ],
+                include: {
+                    model: Room,
+                    attributes: [ 'id', 'room_name' ]
+                }
             }
         ]
     })
-    .then(dbPlantData => {
-        const plants = dbPlantData.map(plant => plant.get({ plain: true }))
-        res.render('addPlant', { plants, loggedIn: true })
+    .then(dbUserData => {
+        const userData = dbUserData.map(data => data.get({ plain: true }))
+        res.render('addPlant', { userData, loggedIn: true })
     })
     .catch(err => {
         console.log(err)
@@ -37,7 +45,12 @@ router.get('/', withAuth, (req, res) => {
 })
 
 router.get('/edit/:id', withAuth, (req, res) => {
-    Post.findOne({})
+    UserPlant.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: []
+    })
     .then(dbPostData => {
         if (!dbPostData) {
             res.status(404).json({ message: 'No post found with this id' })
