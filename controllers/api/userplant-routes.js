@@ -5,23 +5,87 @@ const withAuth = require('../../utils/auth');
 // get all plants /api/plants
 router.get('/', (req, res) => {
     Userplant.findAll({
-        attributes: [ 'id', 'plant_id', 'user_id']
+        attributes: ['id', 'plant_id', 'user_id']
     })
-    .then(dbPlantData => res.json(dbPlantData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+        .then(dbPlantData => res.json(dbPlantData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
-// create plant  /api/plants
-router.post('/', (req, res) => {
+// get one userplant /api/userplants/1
+router.get('/:id', withAuth, (req, res) => {
+    Userplant.findOne({
+        attributes: ['id', 'plant_id', 'user_id'],
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbUserPlantData => {
+            if (!dbUserPlantData) {
+                res.status(404).json({ message: 'No userplant found with this ID' });
+                return;
+            }
+            res.json(dbUserPlantData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+
+// create userplant  /api/userplants
+router.post('/', withAuth, (req, res) => {
     // expects {common_name: ''}
     Userplant.create(req.body)
-        .then(dbPlantData => res.json(dbPlantData))
+        .then(dbUserPlantData => res.json(dbUserPlantData))
         .catch(err => {
             console.log(err)
             res.status(500).json(err)
+        });
+});
+
+// update a userplant info /api/userplants/1
+routher.put('/:id', withAuth, (req, res) => {
+    Userplant.update(req.body,
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(dbUserPlantData => {
+            if (!dbUserPlantData) {
+                res.status(404).json({ message: 'No userplant found with this id!' });
+                return;
+            }
+            res.json(dbUserPlantData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+
+});
+
+// delete userplant  /api/userplants/1
+router.delete('/:id', withAuth, (req, res) => {
+    Userplant.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbUserPlantData => {
+            if (!dbUserPlantData) {
+                res.status(404).json({ message: 'No userplant found with this id!' });
+                return;
+            }
+            res.json(dbUserPlantData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
         });
 });
 

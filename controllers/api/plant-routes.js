@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
     })
         .then(dbPlantData => {
             if (!dbPlantData) {
-                res.status(404).json({ message: 'No plant found5 with this id!' });
+                res.status(404).json({ message: 'No plant found with this id!' });
                 return;
             }
             res.json(dbPlantData);
@@ -97,7 +97,7 @@ router.put('/:id', withAuth, (req, res) => {
     )
         .then(dbPlantData => {
             if (!dbPlantData) {
-                res.status(404).json({ message: 'No plant found3 with this id!' });
+                res.status(404).json({ message: 'No plant found with this id!' });
                 return;
             }
             res.json(dbPlantData);
@@ -117,7 +117,7 @@ router.delete('/:id', withAuth, (req, res) => {
     })
         .then(dbPlantData => {
             if (!dbPlantData) {
-                res.status(404).json({ message: 'No plant found4 with this id!' });
+                res.status(404).json({ message: 'No plant found with this id!' });
                 return;
             }
             res.json(dbPlantData);
