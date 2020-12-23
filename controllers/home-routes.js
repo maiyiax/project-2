@@ -3,5 +3,80 @@ const sequelize = require('../config/connection');
 const { User, Plant, Room } = require('../models');
 
 
+// get all plants
+router.get('/', (req, res) => {
+    Plant.findAll({
+        attributes: [
+            'id',
+            'common_name',
+            'scientific_name',
+            'image_url',
+            'description',
+            'care_level',
+            'toxicity',
+            'water'
+        ],
+    })
+    .then(dbPlantData => {
+        // serialize the data
+        const plants = [];
+        const data = dbPlantData.map(plant => plant.get({ plain: true }));
+
+        // randomize 5 plants to display
+        for (let i = 0; i < 5; i++) {
+            let randomNumber = Math.floor(data.length * Math.random());
+
+            let randomPlants = data.splice(randomNumber, 1);
+            plants.push(randomPlants);
+        }
+        // console.log(plants)
+        res.render('homepage', { plants, loggedIn: true });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// review a single plant
+router.get('/:id', (req, res) => {
+    Plant.findByPk(req.params.id, {
+        attributes: [
+            'id',
+            'common_name',
+            'scientific_name',
+            'image_url',
+            'description',
+            'care_level',
+            'toxicity',
+            'water'
+        ]
+    })
+    .then(dbPlantData => {
+        if (!dbPlantData) {
+            res.status(404).json({ message: 'No plant found with this id!' });
+            return;
+        }
+        
+        const plant = dbPlantData.get({ plain: true });
+        console.log(plant);
+        // where is this being rendered?
+        // need to be logged in to review?
+        res.render('single-plant', {
+            plant,
+            loggedIn: req.session.loggedIn
+        });
+    });
+});
+
+// redirect to login page if user is not logged in
+// router.get('/login', (req, res) => {
+//     if (req.session.loggedIn) {
+//         res.redirect('/');
+//         return;
+//     }
+
+//     res.render('login');
+// });
 
 module.exports = router;

@@ -2,6 +2,7 @@ const User = require('./User');
 const Plant = require('./Plant');
 const Room = require('./Room');
 const Home = require('./Home');
+const Userplant = require('./Userplant')
 
 // may incorporate at later date
 // const Light = require('./Light');
@@ -13,9 +14,9 @@ Home.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-Home.hasMany(Room, {
-    foreignKey: 'room_id'
-});
+// Home.hasMany(Room, {
+//     foreignKey: 'room_id'
+// });
 
 
 // Room
@@ -49,8 +50,27 @@ Plant.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+Plant.belongsTo(User, {
+    through: Userplant,
+    as: 'owned_plants',
+    foreignKey: 'user_id'
+});
+
+Plant.belongsTo(Home, {
+    foreignKey: 'user_id'
+});
+
 // Plant.hasMany(Room, {
     
 // })
 
-module.exports = { User, Plant, Room, Home };
+// Userplant associations
+Userplant.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
+Userplant.belongsTo(Plant, {
+    foreignKey: 'plant_id'
+});
+
+module.exports = { User, Plant, Room, Home, Userplant };

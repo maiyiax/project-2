@@ -18,10 +18,10 @@ router.get('/', (req, res) => {
     })
         .then(dbPlantData => res.json(dbPlantData))
         .catch(err => {
-            console.log(err)
-            res.status(500).json(err)
-        })
-})
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 // get one plant /api/plants/1
 router.get('/:id', (req, res) => {
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
             'toxicity',
             'water'
         ],
-        include: [
+        // include: [
             // {
             //     model: Room,
             //     attributes: [
@@ -47,12 +47,11 @@ router.get('/:id', (req, res) => {
             //         'room_name'
             //     ]
             // },
-            {
-                // needed?
-                model: User,
-                attributes: ['username']
-            }
-        ]
+        //     {
+        //         model: User,
+        //         attributes: ['username']
+        //     }
+        // ]
     })
         .then(dbPlantData => {
             if (!dbPlantData) {
@@ -89,16 +88,7 @@ router.post('/', withAuth, (req, res) => {
 
 // update plant  /api/plants/1
 router.put('/:id', withAuth, (req, res) => {
-    Plant.update(
-        {
-            common_name: req.body.common_name,
-            scientific_name: req.body.scientific_name,
-            image_url: req.body.image_url,
-            description: req.body.description,
-            care_level: req.body.care_level,
-            toxicity: req.body.toxicity,
-            water: req.body.water
-        },
+    Plant.update(req.body, 
         {
             where: {
                 id: req.params.id

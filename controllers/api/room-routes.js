@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Plant, Room } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all rooms
 router.get('/', (req, res) => {
@@ -71,7 +72,7 @@ router.get('/:id', (req, res) => {
 });
 
 // create room
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     // expects {room_name: 'bedroom'}
     Room.create({
         room_name: req.body.room_name
@@ -84,7 +85,7 @@ router.post('/', (req, res) => {
 });
 
 // update room
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Room.update(
         req.body,
         {
@@ -107,7 +108,7 @@ router.put('/:id', (req, res) => {
 });
 
 // delete room
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Room.destroy({
         where: {
             id: req.params.id
@@ -126,4 +127,4 @@ router.delete('/:id', (req, res) => {
         });
 });
 
-module.exports = router
+module.exports = router;
