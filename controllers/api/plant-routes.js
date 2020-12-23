@@ -2,16 +2,20 @@ const router = require('express').Router()
 const { User, Plant, Room } = require('../../models')
 
 // get all plants
-router.get('/', (req, res) => {
+router.get('/plants', (req, res) => {
+    res.render("plants")
     Plant.findAll({
-
+        
     })
     .then(dbPlantData => res.json(dbPlantData))
     .catch(err => {
       console.log(err)
       res.status(500).json(err)
     })
+
 })
+
+  
 
 // get one plant
 router.get('/:id', (req, res) => {
@@ -30,6 +34,9 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err)
     })
 })
+
+
+
 
 // create plant
 router.post('/', (req, res) => {

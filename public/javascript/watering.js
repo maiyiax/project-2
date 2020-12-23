@@ -61,6 +61,8 @@ const waterNext = (plant, diffDays) => {
                 console.log('Water Today!')
             }
             break
+        default:
+            console.log('No plant found!')
     }
 }
 

@@ -1,0 +1,34 @@
+<div class="plants list-group">
+  
+
+<div class="post card">
+  <div class="card-header">
+    <h2>Add Plant</h2>
+  </div>
+
+
+  
+  <div>
+    <ul>
+      {{#each plantdata }}
+      <li>
+        <p>Name: {{common_name}}</p>
+        <p>scientific name: {{scientific_name}}</p>
+        <p>description: {{description}}</p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <form id="new-post-form" class="card-body">
+    <label class="form-label" for="post-title">Plant</label>
+    <input type="text" name="post-title" class="form-input" />
+
+    <label class="form-label" for="post-body">About Plant</label>
+    <textarea name="post-body" class="form-input"></textarea>
+
+    <button type="submit" class="btn">Put in Soil</button>
+  </form>
+</div>
+
+<script src="/javascript/add-plant.js"></script>
