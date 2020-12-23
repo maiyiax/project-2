@@ -37,7 +37,7 @@ router.get('/more-info/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: [ 'plant_id' ],
+        attributes: [ 'id', 'plant_id', 'user_id' ],
         include: [
             {
                 model: Plant,
@@ -49,27 +49,14 @@ router.get('/more-info/:id', (req, res) => {
                     'description',
                     'care_level',
                     'toxicity',
-                    'water',
-                    'room_id'
-                ],
-                include: {
-                    model: Room,
-                    attributes: [ 'id', 'room_name' ]
-                }
-            },
-            {
-                model: Home,
-                attributes: [ 'id', 'home_name', 'room_id' ],
-                include: {
-                    model: Room,
-                    attributes: [ 'id', 'room_name' ]
-                }
+                    'water'
+                ]
             }
         ]
     })
     .then(dbPlantData => {
         if (!dbPlantData) {
-            res.status(404).json({ message: 'No plant found1 with this id' })
+            res.status(404).json({ message: 'No plant found with this id' })
             return
         } 
 

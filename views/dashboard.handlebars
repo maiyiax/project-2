@@ -7,7 +7,7 @@
             <ol>
                 {{#each userData as |plant|}}
                 <li>
-                    {{> plants plant}}
+                    {{> userplants plant}}
                     <a href="/dashboard/more-info/{{plant_id}}">More Info</a>
                 </li>
                 {{/each}}
@@ -18,7 +18,7 @@
     <div class="post card">
         <div class="card-header">
             <div class="new-plant-form">
-                <h2>Choose a plant:</h2>
+                <h2>Choose a plant</h2>
                 <input type="text" id="post-title" name="post-title" />
             </div>
         </div>
