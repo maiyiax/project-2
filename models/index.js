@@ -14,15 +14,14 @@ Home.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-// Home.hasMany(Room, {
-//     foreignKey: 'room_id'
-// });
-
+Home.hasMany(Room, {
+    foreignKey: 'room_id'
+});
 
 // Room
-// Room.belongsTo(Home, {
-
-// });
+Room.belongsTo(Home, {
+    foreignKey: 'home_id'
+});
 
 Room.belongsTo(User, {
     foreignKey: 'user_id'
@@ -72,5 +71,9 @@ Userplant.belongsTo(User, {
 Userplant.belongsTo(Plant, {
     foreignKey: 'plant_id'
 });
+
+Userplant.belongsTo(Home, {
+    foreignKey: 'home_id'
+})
 
 module.exports = { User, Plant, Room, Home, Userplant };

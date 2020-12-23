@@ -5,9 +5,13 @@
         </div>
         <div class="card-body">
             <ol>
-                {{#each userData}}
+                {{#each userData as |plant|}}
                 <li>
+<<<<<<< HEAD
                     {{> plants}}
+=======
+                    {{> userplants plant}}
+>>>>>>> 9b1440fd15c812410381a9365f66d2180d6eaa8a
                     <a href="/dashboard/more-info/{{plant_id}}">More Info</a>
                 </li>
                 {{/each}}
@@ -17,9 +21,11 @@
 
     <div class="post card">
         <div class="card-header">
-            <div>
-                <h2>Choose a plant:</h2>
-                <input type="text" id="post-title" name="post-title" />
+            <div class="new-plant-form">
+                <h2>Choose a plant</h2>
+                <select id="select">
+                    <option value="default">default</option>
+                </select>
             </div>
         </div>
     </div>
@@ -27,6 +33,7 @@
 
 </section>
 
+<script src="/javascript/plant-dropdown.js"></script>
 <script src="/javascript/add-plant.js"></script>
 <script src="/javascript/delete-plant.js"></script>
 {{#if userData.home_id}}
