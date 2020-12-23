@@ -2,11 +2,10 @@ const router = require('express').Router()
 const { User, Home, Room, Plant, Userplant } = require('../models')
 const withAuth = require('../utils/auth')
 
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
     Userplant.findAll({
-        attributes: [ 'plant_id' ],
-        include: [
-            {
+        attributes: [ 'id', 'plant_id', 'user_id' ],
+        include: {
                 model: Plant,
                 attributes: [ 
                     'id',
@@ -18,25 +17,13 @@ router.get('/', withAuth, (req, res) => {
                     'toxicity',
                     'water',
                     'room_id'
-                ],
-                include: {
-                    model: Room,
-                    attributes: [ 'id', 'room_name' ]
-                }
-            },
-            {
-                model: Home,
-                attributes: [ 'id', 'home_name', 'room_id' ],
-                include: {
-                    model: Room,
-                    attributes: [ 'id', 'room_name' ]
-                }
+                ]
             }
-        ]
     })
     .then(dbUserData => {
         const userData = dbUserData.map(data => data.get({ plain: true }))
-        res.render('addPlant', { userData, loggedIn: true })
+        console.log(userData)
+        res.render('dashboard', { userData, loggedIn: true })
     })
     .catch(err => {
         console.log(err)
@@ -44,10 +31,10 @@ router.get('/', withAuth, (req, res) => {
     })
 })
 
-router.get('/more-info/:id', withAuth, (req, res) => {
+router.get('/more-info/:id', (req, res) => {
     Userplant.findOne({
         where: {
-            id: req.params.id
+            plant_id: req.params.id
         },
         attributes: [ 'plant_id' ],
         include: [
@@ -81,7 +68,7 @@ router.get('/more-info/:id', withAuth, (req, res) => {
     })
     .then(dbPlantData => {
         if (!dbPlantData) {
-            res.status(404).json({ message: 'No plant found with this id' })
+            res.status(404).json({ message: 'No plant found1 with this id' })
             return
         } 
 

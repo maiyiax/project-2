@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
             plants.push(randomPlants);
         }
         // console.log(plants)
-        res.render('homepage', { plants, loggedIn: true });
+        res.render('addPlant', { plants, data, loggedIn: true });
     })
     .catch(err => {
         console.log(err);
@@ -45,34 +45,34 @@ router.get('/login', (req, res) => {
 })
 
 // review a single plant
-router.get('/:id', (req, res) => {
-    Plant.findByPk(req.params.id, {
-        attributes: [
-            'id',
-            'common_name',
-            'scientific_name',
-            'image_url',
-            'description',
-            'care_level',
-            'toxicity',
-            'water'
-        ]
-    })
-    .then(dbPlantData => {
-        if (!dbPlantData) {
-            res.status(404).json({ message: 'No plant found with this id!' });
-            return;
-        }
+// router.get('/:id', (req, res) => {
+//     Plant.findOne(req.params.id, {
+//         attributes: [
+//             'id',
+//             'common_name',
+//             'scientific_name',
+//             'image_url',
+//             'description',
+//             'care_level',
+//             'toxicity',
+//             'water'
+//         ]
+//     })
+//     .then(dbPlantData => {
+//         if (!dbPlantData) {
+//             res.status(404).json({ message: 'No plant2 found with this id!' });
+//             return;
+//         }
         
-        const plant = dbPlantData.get({ plain: true });
-        console.log(plant);
-        // where is this being rendered?
-        // need to be logged in to review?
-        res.render('single-plant', {
-            plant,
-            loggedIn: req.session.loggedIn
-        });
-    });
-});
+//         const plant = dbPlantData.get({ plain: true });
+//         console.log(plant);
+//         // where is this being rendered?
+//         // need to be logged in to review?
+//         res.render('single-plant', {
+//             plant,
+//             loggedIn: req.session.loggedIn
+//         });
+//     });
+// });
 
 module.exports = router;
