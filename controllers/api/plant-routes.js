@@ -3,7 +3,7 @@ const { User, Plant, Room } = require('../../models')
 
 // get all plants
 router.get('/plants', (req, res) => {
-    res.render("addPlant")
+    res.render("plants")
     Plant.findAll({
         
     })
@@ -14,6 +14,8 @@ router.get('/plants', (req, res) => {
     })
 
 })
+
+  
 
 // get one plant
 router.get('/:id', (req, res) => {
@@ -32,6 +34,9 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err)
     })
 })
+
+
+
 
 // create plant
 router.post('/', (req, res) => {
