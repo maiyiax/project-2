@@ -19,7 +19,9 @@
         <div class="card-header">
             <div class="new-plant-form">
                 <h2>Choose a plant</h2>
-                <input type="text" id="post-title" name="post-title" />
+                <select id="select">
+                    <option value="default">default</option>
+                </select>
             </div>
         </div>
     </div>
@@ -27,6 +29,7 @@
 
 </section>
 
+<script src="/javascript/plant-dropdown.js"></script>
 <script src="/javascript/add-plant.js"></script>
 <script src="/javascript/delete-plant.js"></script>
 {{#if userData.home_id}}
