@@ -21,14 +21,6 @@ Home.init(
                 model: 'user',
                 key: 'id'
             }
-        },
-        room_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'room',
-                key: 'id'
-            }
         }
     },
     {

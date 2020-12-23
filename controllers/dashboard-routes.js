@@ -5,7 +5,8 @@ const withAuth = require('../utils/auth')
 router.get('/', (req, res) => {
     Userplant.findAll({
         attributes: [ 'id', 'plant_id', 'user_id' ],
-        include: {
+        include: [
+            {
                 model: Plant,
                 attributes: [ 
                     'id',
@@ -15,10 +16,10 @@ router.get('/', (req, res) => {
                     'description',
                     'care_level',
                     'toxicity',
-                    'water',
-                    'room_id'
+                    'water'
                 ]
             }
+        ]
     })
     .then(dbUserData => {
         const userData = dbUserData.map(data => data.get({ plain: true }))
@@ -34,7 +35,7 @@ router.get('/', (req, res) => {
 router.get('/more-info/:id', (req, res) => {
     Userplant.findOne({
         where: {
-            plant_id: req.params.id
+            id: req.params.id
         },
         attributes: [ 'plant_id' ],
         include: [

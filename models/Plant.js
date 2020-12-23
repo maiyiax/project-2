@@ -53,26 +53,10 @@ Plant.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        // incorporating room id?
-        // room_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     references: {
-        //         model: 'room',
-        //         key: 'id'
-        //     }
-        // }
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'id'
-            }
-        },
-        room_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'room',
                 key: 'id'
             }
         }
