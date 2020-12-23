@@ -38,6 +38,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(require('./controllers/'));
 
+//get all plants
+app.route('/controllers/api/plant-routes')
+
+
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
   sequelize.sync({ force: false });
