@@ -48,7 +48,7 @@ router.post('/', withAuth, (req, res) => {
 });
 
 // update a userplant info /api/userplants/1
-routher.put('/:id', withAuth, (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Userplant.update(req.body,
         {
             where: {
