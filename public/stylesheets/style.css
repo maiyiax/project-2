@@ -55,7 +55,7 @@
   }
   
   p {
-    font-size: 1.2rem;
+    font-size: 2.0rem;
   }
   
   input {
@@ -105,6 +105,8 @@
     width: 100%;
     position: fixed;
     background-color: var(--dark);
+    position: absolute;
+    z-index: 1;
   }
   
   .nav-item {
@@ -168,16 +170,28 @@
   
   /* CARDS */
   .card {
-    margin: 0 0 20px 0;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
+    margin: 20px 0 20px 0;
+    padding: 1%;
   }
+
+  .card img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    filter: contrast(150%);
+  }
+  
+  .card img:hover {
+    transform: scaleX(-1);
+  }
+
+  
   
   .card-header {
     color: var(--primary);
     background-color: var(--dark);
     padding: 1%;
-    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+    border-radius: 5px;
   }
   
   .card-body {
