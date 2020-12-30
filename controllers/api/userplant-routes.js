@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 // get one userplant /api/userplants/1
-router.get('/:id', withAuth, (req, res) => {
+router.get('/:id', (req, res) => {
     Userplant.findOne({
         attributes: ['id', 'plant_id', 'user_id'],
         where: {
@@ -37,7 +37,7 @@ router.get('/:id', withAuth, (req, res) => {
 
 
 // create userplant  /api/userplants
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     // expects {common_name: ''}
     Userplant.create(req.body)
         .then(dbUserPlantData => res.json(dbUserPlantData))
