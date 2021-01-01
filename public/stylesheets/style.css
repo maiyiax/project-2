@@ -115,6 +115,7 @@
   
   .nav-item a {
     color: var(--aqua);
+    font-size: 25px;
   }
   
   .hero {
@@ -173,6 +174,7 @@
     margin: 20px 0 20px 0;
     padding: 1%;
     background-color: var(--secondary);
+
   } */
 
   .card img {
