@@ -55,7 +55,7 @@
   }
   
   p {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
   }
   
   input {
@@ -104,7 +104,7 @@
   .navbar {
     width: 100%;
     position: fixed;
-    background-color: var(--dark);
+    background-color: var(--light-dark);
     position: absolute;
     z-index: 1;
   }
@@ -114,12 +114,12 @@
   }
   
   .nav-item a {
-    color: var(--primary);
+    color: var(--aqua);
   }
   
   .hero {
     padding: 3% 4%;
-    background-color: var(--dark);
+    background-color: var(--primary);
     color: var(--primary);
   }
   
@@ -129,12 +129,12 @@
   
   .app-title {
     font-size: 3rem;
-    background-color: var(--primary);
-    color: var(--dark);
+    background-color: var(--aqua);
+    color: var(--light-dark);
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    box-shadow: 6px 5px var(--dark);
   }
   
   .app-title a {
@@ -172,6 +172,7 @@
    .card {
     margin: 20px 0 20px 0;
     padding: 1%;
+    background-color: var(--secondary);
   } */
 
   .card img {
