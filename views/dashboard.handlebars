@@ -1,4 +1,5 @@
 <section>
+<<<<<<< HEAD
     <div class="post card">
         <div class="card-header">
             <h2>Your Plants</h2>
@@ -13,6 +14,14 @@
                 <button type="button" class="btn" id="deletePlant">Remove this Plant</button>
                 {{/each}}
             </ol>
+=======
+    <div>
+        <h2>Your Plants</h2>
+        <div class="flex-row-1">
+            {{#each userData as |plant|}}
+            {{> userplants plant}}
+            {{/each}}
+>>>>>>> develop
         </div>
     </div>
 

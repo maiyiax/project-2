@@ -1,18 +1,34 @@
 <section>
-    <div class="container">
-        <h2>Todays Plants</h2>
-        {{!-- <div class="card-header">
-        </div> --}}
-        <div class="row">
-
-
+    <div>
+        <h2>Suggested Plants</h2>
+        <div class="flex-row-1">
             {{#each plants as |plant|}}
-
             {{> plants plant}}
-            
-
             {{/each}}
+        </div>
+    </div>
 
+    <div>
+        <h2>What The Planters is all about!</h2>
+        <div class="card align-center">
+            <div class="card-header">
+                <h1 class="card-title plant-title">Houseplant Enthusiast</h1>
+            </div>
+            <div class="card-body center">
+                <p>Succulents, fiddle leaf figs, the elusive variegated monstera: Ask proud plant parents about their collections, and they’ll gush with such enthusiasm that you’d think they were talking about actual children.</p>
+            </div>
+            <div class="card-header">
+                <h1 class="card-title plant-title">Find Plants</h1>
+            </div>
+            <div class="card-body center">
+                <p>Use The Planters search feature to find a plant suited to your homes environment. You can also search for plants based on experience level and for plants that are safe for your fur babies!</p>
+            </div>
+            <div class="card-header">
+                <h1 class="card-title plant-title">Add a Home</h1>
+            </div>
+            <div class="card-body center">
+                <p>Users who sign up to The Planters will be greeted with their very own dashboard. You can add a home, add rooms to your home and then add plants to those rooms to create your own virtual ecosystem. Future development will include light levels for each room so we can suggest the best plants for each of your home's rooms.</p>
+            </div>
         </div>
     </div>
 

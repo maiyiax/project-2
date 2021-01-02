@@ -55,8 +55,8 @@ router.get('/more-info/:id', (req, res) => {
             'toxicity',
             'water'
         ]
-
     })
+<<<<<<< HEAD
         .then(dbPlantData => {
             if (!dbPlantData) {
                 res.status(404).json({ message: 'No plant found with this id' })
@@ -73,7 +73,20 @@ router.get('/more-info/:id', (req, res) => {
         .catch(err => {
             console.log(err)
             res.status(500).json(err)
+=======
+    .then(dbPlantData => {
+        if (!dbPlantData) {
+            res.status(404).json({ message: 'No plant found with this id!' })
+            return
+        }
+        
+        const plant = dbPlantData.get({ plain: true })
+        res.render('editPlant', {
+            plant,
+            loggedIn: req.session.loggedIn
+>>>>>>> develop
         })
+    })
 })
 
 module.exports = router
