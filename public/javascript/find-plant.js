@@ -20,11 +20,13 @@ const populatePlants = (plants) => {
     for (let i = 0; i < plants.length; i++) {
         let plant = plants[i].common_name
         let filters = plants[i].filters
+        let plantID = plants[i].id
+        let plantURL = `/plants/${plantID}`
         let trPlant = document.createElement('tr')
         let tdName = document.createElement('td')
         let tdFilters = document.createElement('td')
 
-        tdName.innerHTML = plant
+        tdName.innerHTML = `<a href="${plantURL}"><p class="link-styling">${plant}</p></a>`
         tdFilters.innerHTML = filters
 
         trPlant.appendChild(tdName)

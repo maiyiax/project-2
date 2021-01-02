@@ -129,13 +129,13 @@
   }
   
   .app-title {
-    font-size: 3rem;
+    font-size: 10rem;
     background-color: var(--aqua);
     color: var(--light-dark);
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--dark);
+    box-shadow: 8px 7px var(--dark);
   }
   
   .app-title a {
@@ -171,7 +171,7 @@
   
   /* CARDS */
    .card {
-    margin: 20px 0 20px 0;
+    margin: 5px 0 20px 0;
     padding: 1%;
     background-color: var(--secondary);
 
@@ -401,6 +401,14 @@
     object-fit: cover;
     max-height: 300px;
     min-height: 300px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .link-styling {
+    text-decoration: none;
   }
   
   /* col-sm */
