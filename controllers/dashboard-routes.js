@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth')
 
 router.get('/', (req, res) => {
     Userplant.findAll({
-        attributes: [ 'id', 'plant_id', 'user_id' ],
+        attributes: [ 'id','plant_id', 'user_id' ],
         include: [
             {
                 model: Plant,

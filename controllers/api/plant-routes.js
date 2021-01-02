@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
             'description',
             'care_level',
             'toxicity',
-            'water'
+            'water',
+            'filters'
         ]
     })
         .then(dbPlantData => res.json(dbPlantData))
@@ -37,7 +38,8 @@ router.get('/:id', (req, res) => {
             'description',
             'care_level',
             'toxicity',
-            'water'
+            'water',
+            'filters'
         ],
         // include: [
             // {
@@ -77,6 +79,7 @@ router.post('/', withAuth, (req, res) => {
         care_level: req.body.care_level,
         toxicity: req.body.toxicity,
         water: req.body.water,
+        filters: req.body.filters,
         user_id: req.session.user_id
     })
         .then(dbPlantData => res.json(dbPlantData))
