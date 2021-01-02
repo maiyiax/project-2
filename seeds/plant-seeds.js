@@ -376,7 +376,7 @@ const plantdata = [
         filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
-        common_name: 'Chinese money Plant',
+        common_name: 'Chinese Money Plant',
         scientific_name: 'Pilea peperomioides',
         image_url: 'https://s7d1.scene7.com/is/image/terrain/46197901_000_a?$zoom2$',
         description: 'Having a superficial resemblance to pennyworts and growing 30 cm (12 in) tall and wide, it is an erect, evergreen perennial, with round, dark green, peltate leaves up to 10 cm in diameter on a long petiole. The stem axis is greenish to dark brown, usually simple, often upright straight, slightly lignified at the base. In poor growing conditions, the plants lose their leaves in the lower part of the branch axis and thereby assume a very distinctive habit. The plants are completely hairless. Striking are their large, circular, shiny, leaves, which can have a diameter of over 15 centimeters.',
