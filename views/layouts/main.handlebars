@@ -17,6 +17,11 @@
         {{#if loggedIn}}
         <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
         <li class="li-inline nav-item"><a id="logout" href="/">Logout</a></li>
+        
+        {{!-- if logged in, add link to add plant section --}}
+        <li class="li-inline nav-item"><a href="#plantForm">Add Plant</a></li>
+        <li class="li-inline nav-item"><a href="#homeForm">Add Home</a></li>
+        
         {{else}}
          <li class="li-inline nav-item"><a href="/login">Login</a></li>
         {{/if}}

@@ -25,13 +25,13 @@ Userplant.init(
                 key: 'id'
             }
         },
-        home_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'home',
-                key: 'id'
-            }
-        },
+        // home_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'home',
+        //         key: 'id'
+        //     }
+        // },
         // room_id: {
         //     type: DataTypes.INTEGER,
         //     references: {

@@ -7,11 +7,15 @@ router.get('/', (req, res) => {
         where: {
             user_id: req.session.user_id
         },
-        attributes: [ 'id', 'plant_id', 'user_id'],
+        attributes: ['id', 'plant_id', 'user_id'],
         include: [
             {
+                model: Home,
+                attributes: ['id', 'home_name', 'user_id']
+            },
+            {
                 model: Plant,
-                attributes: [ 
+                attributes: [
                     'id',
                     'common_name',
                     'scientific_name',
@@ -21,59 +25,54 @@ router.get('/', (req, res) => {
                     'toxicity',
                     'water'
                 ]
-            }
+            },
         ]
     })
-    .then(dbUserData => {
-        const userData = dbUserData.map(data => data.get({ plain: true }));
-        // console.log(userData);
-        res.render('dashboard', { userData, loggedIn: true });
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+        .then(dbUserData => {
+            const userData = dbUserData.map(data => data.get({ plain: true }));
+            console.log(userData);
+            res.render('dashboard', { userData, loggedIn: true });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 
 router.get('/more-info/:id', (req, res) => {
-    Userplant.findOne({
+    Plant.findOne({
         where: {
             id: req.params.id
         },
-        attributes: [ 'id', 'plant_id', 'user_id' ],
-        include: [
-            {
-                model: Plant,
-                attributes: [ 
-                    'id',
-                    'common_name',
-                    'scientific_name',
-                    'image_url',
-                    'description',
-                    'care_level',
-                    'toxicity',
-                    'water'
-                ]
-            }
+        attributes: [
+            'id',
+            'common_name',
+            'scientific_name',
+            'image_url',
+            'description',
+            'care_level',
+            'toxicity',
+            'water'
         ]
-    })
-    .then(dbPlantData => {
-        if (!dbPlantData) {
-            res.status(404).json({ message: 'No plant found with this id' })
-            return
-        } 
 
-        const plant = dbPlantData.get({ plain: true })
-        res.render('editPlant', {
-            plant,
-            loggedIn: true
+    })
+        .then(dbPlantData => {
+            if (!dbPlantData) {
+                res.status(404).json({ message: 'No plant found with this id' })
+                return
+            }
+
+            const plant = dbPlantData.get({ plain: true })
+            res.render('editPlant', {
+                plant,
+                loggedIn: true
+            })
         })
-    })
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err)
-    })
+        .catch(err => {
+            console.log(err)
+            res.status(500).json(err)
+        })
 })
 
 module.exports = router

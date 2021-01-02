@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
         attributes: ['id', 'plant_id', 'user_id'],
         include: [
             {
+                model: Home,
+                attributes: ['id', 'home_name', 'user_id']
+            },
+            {
                 model: Plant,
                 attributes: [ 
                     'id',
@@ -20,12 +24,6 @@ router.get('/', (req, res) => {
                     'water'
                 ]
             },
-            {
-                model: Home,
-                attributes: [
-                    'id', 'home_name', 'user_id'
-                ]
-            }
         ]
     })
         .then(dbPlantData => res.json(dbPlantData))
@@ -38,7 +36,7 @@ router.get('/', (req, res) => {
 // get one userplant /api/userplants/1
 router.get('/:id', (req, res) => {
     Userplant.findOne({
-        attributes: ['id', 'plant_id', 'user_id', 'home_id'],
+        attributes: ['id', 'plant_id', 'user_id'],
         where: {
             id: req.params.id
         },
@@ -56,12 +54,7 @@ router.get('/:id', (req, res) => {
                     'water'
                 ]
             },
-            {
-                model: Home,
-                attributes: [
-                    'id', 'home_name', 'user_id'
-                ]
-            }
+
         ]
     })
         .then(dbUserPlantData => {
