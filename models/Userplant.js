@@ -24,7 +24,7 @@ Userplant.init(
                 model: 'user',
                 key: 'id'
             }
-        }
+        },
         // home_id: {
         //     type: DataTypes.INTEGER,
         //     references: {

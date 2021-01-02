@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Plant, Room, Userplant } = require('../../models');
+const { User, Plant, Room, Userplant, Home } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all userplants /api/plants
@@ -7,6 +7,10 @@ router.get('/', (req, res) => {
     Userplant.findAll({
         attributes: ['id', 'plant_id', 'user_id'],
         include: [
+            {
+                model: Home,
+                attributes: ['id', 'home_name', 'user_id']
+            },
             {
                 model: Plant,
                 attributes: [ 
@@ -19,7 +23,7 @@ router.get('/', (req, res) => {
                     'toxicity',
                     'water'
                 ]
-            }
+            },
         ]
     })
         .then(dbPlantData => res.json(dbPlantData))
@@ -49,7 +53,8 @@ router.get('/:id', (req, res) => {
                     'toxicity',
                     'water'
                 ]
-            }
+            },
+
         ]
     })
         .then(dbUserPlantData => {

@@ -13,12 +13,12 @@ async function newHomeHandler(event) {
         }
     })
   
-    console.log(response)
-    // if (response.ok) {
-    //     document.location.replace('/dashboard')
-    // } else {
-    //     alert(response.statusText)
-    // }
+    
+    if (response.ok) {
+        document.location.replace('/dashboard');
+    } else {
+        alert(response.statusText)
+    }
 }
   
 document.querySelector('#createHomeButton').addEventListener('click', newHomeHandler)

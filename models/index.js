@@ -20,7 +20,7 @@ Home.hasMany(Room, {
 });
 
 Home.hasMany(Userplant, {
-    foreignKey: 'home_id'
+    foreignKey: 'user_id'
 });
 
 // Room
@@ -95,7 +95,7 @@ Userplant.belongsTo(Plant, {
 });
 
 Userplant.belongsTo(Home, {
-    foreignKey: 'home_id',
+    foreignKey: 'user_id',
     onDelete: 'SET NULL'
 });
 

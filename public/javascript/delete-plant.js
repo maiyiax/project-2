@@ -16,4 +16,4 @@
 //     }
 // }
   
-// document.querySelector('.delete-plant-btn').addEventListener('click', deletePlantHandler)
+// document.querySelector('#deletePlant').addEventListener('click', deletePlantHandler)
