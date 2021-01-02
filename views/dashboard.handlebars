@@ -1,18 +1,10 @@
 <section>
-    <div class="post card">
-        <div class="card-header">
-            <h2>Your Plants</h2>
-        </div>
-        <div class="card-body">
-            <ol>
-                {{#each userData as |plant|}}
-                <li>
-                    {{> userplants plant}}
-                    <a href="/dashboard/more-info/{{plant.id}}">More Info</a>
-                </li>
-                <button type="button" class="btn" id="deletePlant">Remove this Plant</button>
-                {{/each}}
-            </ol>
+    <div>
+        <h2>Your Plants</h2>
+        <div class="flex-row-1">
+            {{#each userData as |plant|}}
+            {{> userplants plant}}
+            {{/each}}
         </div>
     </div>
 

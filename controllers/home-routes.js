@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
         const data = dbPlantData.map(plant => plant.get({ plain: true }));
 
         // randomize 5 plants to display
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             let randomNumber = Math.floor(data.length * Math.random());
 
             let randomPlants = data.splice(randomNumber, 1);

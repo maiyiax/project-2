@@ -1,10 +1,11 @@
-<div class="post card">
+<div class="card suggested-plants">
     <div class="card-header">
-      <h2>{{plant.common_name}}</h2>
+        <h1 class="card-title plant-title">{{common_name}}</h1>
     </div>
-
     <div class="card-body">
-      <div><img src="{{plant.image_url}}" alt="{{plant.scientific_name}}"/></div>
-      <div><p>{{plant.description}}</p></div>
+        <a href="/plants/{{id}}">
+          <img class="card-img" src="{{image_url}}" alt="{{scientific_name}}">
+        </a>
+        <button type="button" class="btn" id="deletePlant">Remove this Plant</button>
     </div>
-  </div>
+</div>

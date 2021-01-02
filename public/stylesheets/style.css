@@ -385,6 +385,23 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .plant-title {
+    background-color: var(--aqua);
+    text-align: center;
+  }
+
+  .suggested-plants {
+    width: 32%;
+    margin: 5px;
+  }
+
+  .card-img {
+    background-position: center;
+    object-fit: cover;
+    max-height: 300px;
+    min-height: 300px;
+  }
   
   /* col-sm */
   @media screen and (min-width: 640px) {
