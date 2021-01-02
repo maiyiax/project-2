@@ -1,0 +1,19 @@
+{{> description plant }}
+
+
+
+{{#if loggedIn}}
+    <div class="post card">
+        <div class="card-header">
+            <div class="new-plant-form">
+                <h2>Would you like to add this plant to your home?</h2>
+                <input type="text" id="post-title" name="post-title" />
+            </div>
+        </div>
+    </div>
+{{/if}}
+
+{{#if loggedIn}}
+<script src="/javascript/add-plant.js"></script>
+{{/if}}
+
