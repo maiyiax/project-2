@@ -9,22 +9,22 @@
             {{#each plants as |plant|}}
 
             {{> plants plant}}
-            {{!-- <a href="/plants/{{id}}">More Info</a> --}}
+            
 
             {{/each}}
 
         </div>
     </div>
 
-    {{!-- <div class="post card">
+    <div class="post card">
         <div class="card-header">
             <div class="new-plant-form">
                 <h2>Search for a plant based on your environment!</h2>
-                <div class="flex-row col-2">
+                <div class="flex-row-1">
                     <input type="text" class="search-input1" id="userInputName" onkeyup="searchPlantsByName()" placeholder="Search for plants by name...">
                     <input type="text" class="search-input2" id="userInputFilter" onkeyup="searchPlantsByFilters()" placeholder="Search for plants by characteristics...         (seperate by commas)">
                 </div>
-                <div class="flex-row col-8">
+                <div class="flex-row-1">
                     <button type="button" id="low-light" class="btn filter-btns" onclick="searchPlantsByButtons('low sunlight')">Low Sunlight</button> 
                     <button type="button" id="medium-light" class="btn filter-btns" onclick="searchPlantsByButtons('medium sunlight')">Medium Sunlight</button> 
                     <button type="button" id="direct-light" class="btn filter-btns" onclick="searchPlantsByButtons('direct sunlight')">Direct Sunlight</button> 
@@ -45,8 +45,7 @@
                 </table> 
             </div>
         </div>
-    </div> --}}
+    </div>
 </section>
 
-<script src="/javascript/add-plant.js"></script>
 <script src="/javascript/find-plant.js"></script>
