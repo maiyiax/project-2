@@ -4,7 +4,10 @@ const withAuth = require('../utils/auth')
 
 router.get('/', (req, res) => {
     Userplant.findAll({
-        attributes: [ 'id','plant_id', 'user_id' ],
+        where: {
+            user_id: req.session.user_id
+        },
+        attributes: [ 'id', 'plant_id', 'user_id'],
         include: [
             {
                 model: Plant,
@@ -22,15 +25,16 @@ router.get('/', (req, res) => {
         ]
     })
     .then(dbUserData => {
-        const userData = dbUserData.map(data => data.get({ plain: true }))
-        console.log(userData)
-        res.render('dashboard', { userData, loggedIn: true })
+        const userData = dbUserData.map(data => data.get({ plain: true }));
+        // console.log(userData);
+        res.render('dashboard', { userData, loggedIn: true });
     })
     .catch(err => {
-        console.log(err)
-        res.status(500).json(err)
-    })
-})
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 
 router.get('/more-info/:id', (req, res) => {
     Userplant.findOne({
@@ -63,7 +67,7 @@ router.get('/more-info/:id', (req, res) => {
         const plant = dbPlantData.get({ plain: true })
         res.render('editPlant', {
             plant,
-            loggedIn: req.session.loggedIn
+            loggedIn: true
         })
     })
     .catch(err => {

@@ -2,10 +2,25 @@ const router = require('express').Router();
 const { User, Plant, Room, Userplant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all plants /api/plants
+// get all userplants /api/plants
 router.get('/', (req, res) => {
     Userplant.findAll({
-        attributes: ['id', 'plant_id', 'user_id']
+        attributes: ['id', 'plant_id', 'user_id'],
+        include: [
+            {
+                model: Plant,
+                attributes: [ 
+                    'id',
+                    'common_name',
+                    'scientific_name',
+                    'image_url',
+                    'description',
+                    'care_level',
+                    'toxicity',
+                    'water'
+                ]
+            }
+        ]
     })
         .then(dbPlantData => res.json(dbPlantData))
         .catch(err => {
@@ -20,7 +35,22 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'plant_id', 'user_id'],
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: Plant,
+                attributes: [ 
+                    'id',
+                    'common_name',
+                    'scientific_name',
+                    'image_url',
+                    'description',
+                    'care_level',
+                    'toxicity',
+                    'water'
+                ]
+            }
+        ]
     })
         .then(dbUserPlantData => {
             if (!dbUserPlantData) {
@@ -39,7 +69,10 @@ router.get('/:id', (req, res) => {
 // create userplant  /api/userplants
 router.post('/', (req, res) => {
     // expects {common_name: ''}
-    Userplant.create(req.body)
+    Userplant.create({
+        plant_id: req.body.plant_id,
+        user_id: req.session.user_id
+    })
         .then(dbUserPlantData => res.json(dbUserPlantData))
         .catch(err => {
             console.log(err)

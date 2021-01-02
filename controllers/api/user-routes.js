@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { User, Plant, Room } = require('../../models')
+const { User, Plant, Room, Userplant } = require('../../models')
 
 // get users
 router.get('/', (req, res) => {
@@ -22,6 +22,25 @@ router.get('/:id', (req, res) => {
         },
         include: [
             {
+                model: Userplant,
+                attributes: ['id', 'plant_id', 'user_id'],
+                include: [
+                    {
+                        model: Plant,
+                        attributes: [ 
+                            'id',
+                            'common_name',
+                            'scientific_name',
+                            'image_url',
+                            'description',
+                            'care_level',
+                            'toxicity',
+                            'water'
+                        ]
+                    }
+                ]
+            },
+            {
                 model: Plant,
                 attributes: [
                     'id',
@@ -32,7 +51,7 @@ router.get('/:id', (req, res) => {
                     'care_level',
                     'toxicity',
                     'water'
-                ]
+                ],
             },
             {
                 model: Room,

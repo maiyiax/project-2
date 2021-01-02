@@ -5,9 +5,6 @@ const withAuth = require('../../utils/auth');
 // get all rooms
 router.get('/', (req, res) => {
     Room.findAll({
-        where: {
-            user_id: req.session.user_id
-        },
         attributes: ['id', 'room_name'],
         // include plants in this room?
         include: [

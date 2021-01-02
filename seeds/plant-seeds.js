@@ -624,7 +624,7 @@ const plantdata = [
     {
         common_name: "Lucky Bamboo",
         scientific_name: "Dracaena sanderiana",
-        image_url: 'https://www.trees.com/sites/default/files/field/image/Lucky-Bamboo-Tree_0.jpg',
+        image_url: 'https://i.pinimg.com/originals/af/a9/c5/afa9c5dac5462ffba9e88badc9a3903f.jpg',
         description: 'A Lucky Bamboo plant is really made up of the cut stalks of a Dracaena Sanderiana and is native to West Africa and Eastern Asia. The Lucky Bamboo stalks are usually between 4″- 24″in height. Followers of Feng Shui believe that the Lucky Bamboo plant brings prosperity and good fortune to a home or business. If the Lucky Bamboo arrangement has three stalks it brings happiness, five stalks bring wealth, and six stalks bring health. Four stalks are never allowed  since the word four in Chinese sounds too close to the Chinese word for death. If you buy Lucky Bamboo stalks loose and not planted, be sure to keep them in water until you have permanently placed them in a vase or decorative container. If you purchase multiple Lucky Bamboo stems that are tied together, do not remove the ties, this stabilizes the plant. Lucky Bamboo plants require very little care and grow practically anywhere as long as you keep the water clean and chemical free.',
         care_level: 'easy',
         toxicity: 1,

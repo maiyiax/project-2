@@ -85,7 +85,10 @@ router.get('/:id', withAuth, (req, res) => {
 
 // create homes  /api/homes
 router.post('/', withAuth, (req, res) => {
-    Home.create(req.body)
+    Home.create({
+        home_name: req.body.home_name,
+        user_id: req.session.user_id
+    })
         .then(dbHomeData => res.json(dbHomeData))
         .catch(err => {
             console.log(err)
