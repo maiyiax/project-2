@@ -9,7 +9,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 1,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Low Sunlight, Intermediate, Moderate Water, Humid Environment'
     },
     {
         common_name: "Elephant's Ear",
@@ -19,7 +20,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 1,
         // light_id: 3, 
-        water: 'daily'
+        water: 'daily',
+        filters: 'Toxic, Direct Sunlight, Intermediate, Medium Water'
     },
     {
         common_name: 'Flamingo Flower',
@@ -29,7 +31,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'daily'
+        water: 'daily',
+        filters: 'Toxic, Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Zebra Plant',
@@ -39,7 +42,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 3,
-        water: 'daily'
+        water: 'daily',
+        filters: 'Pet Friendly, Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Norfolk Island Pine',
@@ -49,7 +53,8 @@ const plantdata = [
         care_level: 'moderate',
         toxicity: 0,
         // light_id: 4,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Intermediate, Light Water, Humid Environment'
     },
     {
         common_name: 'Asparagus Fern',
@@ -59,7 +64,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Medium Sunlight, Beginners, Moderate Water, Humid Environment'
     },
     {
         common_name: 'Cast Iron Plant',
@@ -70,6 +76,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 2,
         water: 'bi-weekly',
+        filters: 'Pet Friendly, Low Sunlight, Beginners, Moderate Water, Humid Environment'
     },
     {
         common_name: 'Begonia',
@@ -80,6 +87,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 2,
         water: 'weekly',
+        filters: 'Medium Sunlight, Intermediate, Light Water'
     },
     {
         common_name: 'Urn Plant',
@@ -89,7 +97,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Pet Friendly, Low Sunlight, Beginners, Moderate Water'
     },
     {
         common_name: 'Peacock Plant',
@@ -99,7 +108,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 3,
-        water: 'daily'
+        water: 'daily',
+        filters: 'Pet Friendly, Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Parlor Palm',
@@ -109,7 +119,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Pet Friendly, Direct Sunlight, Beginners, Light Water, Warm Environment'
     },
     {
         common_name: 'Areca Palm',
@@ -119,7 +130,8 @@ const plantdata = [
         care_level: 'moderate',
         toxicity: 0,
         // light_id: 3,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Pet Friendly, Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Spider Plant',
@@ -129,7 +141,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 2,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Pet Friendly, Low Sunlight, Beginners, Light Water'
     },
     {
         common_name: 'Cyclamen',
@@ -139,7 +152,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Toxic, Medium Sunlight, Pros, Moderate Water, Cool Environment'
     },
     {
         common_name: 'Dumb Cane Plant',
@@ -149,7 +163,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 2,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Toxic, Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Marble Queen Pothos",
@@ -159,7 +174,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 2,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Rubber Tree Plant',
@@ -169,7 +185,8 @@ const plantdata = [
         care_level: 'moderate',
         toxicity: 1,
         // light_id: 3,
-        water: 'monthly'
+        water: 'monthly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Amaryllis',
@@ -179,7 +196,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Wax Plant',
@@ -189,7 +207,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Sensitive Plant',
@@ -199,7 +218,8 @@ const plantdata = [
         care_level: 'moderate',
         toxicity: 1,
         // light_id: 4,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Boston Fern',
@@ -209,7 +229,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Moth Orchid',
@@ -219,7 +240,8 @@ const plantdata = [
         care_level: 'moderate',
         toxicity: 0,
         // light_id: 2,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Boat Orchids',
@@ -229,7 +251,8 @@ const plantdata = [
         care_level: 'moderate',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Baby Rubberplant',
@@ -239,7 +262,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Heartleaf Philodendron',
@@ -249,7 +273,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 2,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Prayer Plant',
@@ -259,7 +284,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 3,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Split Leaf Philodendron',
@@ -269,7 +295,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: ,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Snake Plant',
@@ -279,7 +306,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 2,
-        water: 'monthly'
+        water: 'monthly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Arboricola',
@@ -289,7 +317,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Gloxina',
@@ -299,7 +328,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 1,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Peace Lily',
@@ -309,7 +339,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 1,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Madagascar Jasmine',
@@ -319,7 +350,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 4,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Cape Primrose',
@@ -329,7 +361,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Wandering Jew',
@@ -339,7 +372,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Chinese money Plant',
@@ -349,7 +383,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Satin Pothos',
@@ -359,7 +394,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Yucca',
@@ -369,7 +405,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Aloe vera',
@@ -379,7 +416,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Prickly Pear',
@@ -389,7 +427,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 4,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Christmas Cactus',
@@ -399,7 +438,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Moon Cactus',
@@ -409,7 +449,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 2,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Jade Plant',
@@ -419,7 +460,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Echeveria',
@@ -429,7 +471,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 4,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'English Ivy',
@@ -439,7 +482,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: 'Strawberry Begonia',
@@ -449,7 +493,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Azalea",
@@ -459,7 +504,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Baby's Tear's Plant",
@@ -469,7 +515,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 3,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Bird of Paradise",
@@ -479,7 +526,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 1,
         // light_id: 4,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Bleeding-Heart Vine",
@@ -489,7 +537,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Guzmania",
@@ -499,7 +548,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 2,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Calla Lily",
@@ -509,7 +559,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 3,
-        water: 'daily'
+        water: 'daily',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Cat Palm",
@@ -519,7 +570,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Chrysanthemums",
@@ -529,7 +581,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: ,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Cineraria",
@@ -539,7 +592,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Kaffir Lily",
@@ -549,7 +603,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Coleus",
@@ -559,7 +614,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 0,
         // light_id: 4,
-        water: 'twice-weekly'
+        water: 'twice-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Brazilian Snow Plant ",
@@ -569,7 +625,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 1,
         // light_id: 3,
-        water: 'daily'
+        water: 'daily',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Desert Rose",
@@ -579,7 +636,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Donkey's Tail",
@@ -589,7 +647,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 0,
         // light_id: 4,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Emerald Gem",
@@ -599,7 +658,8 @@ const plantdata = [
         care_level: 'difficult',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Paperplant",
@@ -609,7 +669,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 0,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Fiddle leaf fig",
@@ -619,7 +680,8 @@ const plantdata = [
         care_level: 'average',
         toxicity: 1,
         // light_id: 3,
-        water: 'bi-weekly'
+        water: 'bi-weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Lucky Bamboo",
@@ -629,7 +691,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 2,
-        water: 'monthly'
+        water: 'monthly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Moses in the cradle",
@@ -639,7 +702,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 4,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     },
     {
         common_name: "Poinsettia",
@@ -649,7 +713,8 @@ const plantdata = [
         care_level: 'easy',
         toxicity: 1,
         // light_id: 3,
-        water: 'weekly'
+        water: 'weekly',
+        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
     }
 ]
 

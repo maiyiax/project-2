@@ -1,31 +1,51 @@
 <section>
-    <div class="post card">
-        <div class="card-header">
-            <h2>Todays Plants</h2>
-        </div>
-        <div class="card">
-            
-            <ol>
-                {{#each plants as |plant|}}
-                <li>
-                    {{> plants plant}}
-                    <a href="/plants/{{id}}">More Info</a>
-                </li>
-                {{/each}}
-            </ol>
+    <div class="container">
+        <h2>Todays Plants</h2>
+        {{!-- <div class="card-header">
+        </div> --}}
+        <div class="row">
+
+
+            {{#each plants as |plant|}}
+
+            {{> plants plant}}
+            {{!-- <a href="/plants/{{id}}">More Info</a> --}}
+
+            {{/each}}
+
         </div>
     </div>
 
     <div class="post card">
         <div class="card-header">
             <div class="new-plant-form">
-                <h2>Choose a plant</h2>
-                <input type="text" id="post-title" name="post-title" />
+                <h2>Search for a plant based on your environment!</h2>
+                <div class="flex-row col-2">
+                    <input type="text" class="search-input1" id="userInputName" onkeyup="searchPlantsByName()" placeholder="Search for plants by name...">
+                    <input type="text" class="search-input2" id="userInputFilter" onkeyup="searchPlantsByFilters()" placeholder="Search for plants by characteristics...         (seperate by commas)">
+                </div>
+                <div class="flex-row col-8">
+                    <button type="button" id="low-light" class="btn filter-btns" onclick="searchPlantsByButtons('low sunlight')">Low Sunlight</button> 
+                    <button type="button" id="medium-light" class="btn filter-btns" onclick="searchPlantsByButtons('medium sunlight')">Medium Sunlight</button> 
+                    <button type="button" id="direct-light" class="btn filter-btns" onclick="searchPlantsByButtons('direct sunlight')">Direct Sunlight</button> 
+                    <button type="button" id="pet-friendly" class="btn filter-btns" onclick="searchPlantsByButtons('pet friendly')">Pet Friendly</button> 
+                    <button type="button" id="beginners" class="btn filter-btns" onclick="searchPlantsByButtons('beginners')">Beginners</button> 
+                    <button type="button" id="intermediate" class="btn filter-btns" onclick="searchPlantsByButtons('intermediate')">Intermediate</button> 
+                    <button type="button" id="Pros" class="btn filter-btns" onclick="searchPlantsByButtons('pros')">Pros</button>
+                    <button type="button" id="reset" class="btn filter-btns" onclick="resetSearch()">Reset</button> 
+                </div>
+            </div>
+
+            <div>
+                <table id="plantTable">
+                    <tr class="header">
+                        <th style="width:30%;">Common Name</th>
+                        <th style="width:70%;">Characteristics</th>
+                    </tr>
+                </table> 
             </div>
         </div>
     </div>
-
-
 </section>
 
 <script src="/javascript/add-plant.js"></script>

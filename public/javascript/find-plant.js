@@ -1,9 +1,4 @@
-const resultsEl = document.getElementById('#results')
-
-// store plants database in array to be filtered
-let plants = []
-// array to store search criteria
-let criteria = []
+const plantTable = document.getElementById("plantTable")
 
 // calls database when page is loaded to store plant information in array
 const getPlants = () => {
@@ -11,8 +6,7 @@ const getPlants = () => {
     .then((response) => {
         if (response.ok) {
             response.json().then((data) => {
-                console.log(data)
-                plants.push(data)
+                populatePlants(data)
             })
         } 
     })
@@ -21,32 +15,97 @@ const getPlants = () => {
     })
 }
 
-// capture filter criteria
-function searchCriteriaHandler(event) {
-    event.preventDefault()
+// display plants in table
+const populatePlants = (plants) => {
+    for (let i = 0; i < plants.length; i++) {
+        let plant = plants[i].common_name
+        let filters = plants[i].filters
+        let trPlant = document.createElement('tr')
+        let tdName = document.createElement('td')
+        let tdFilters = document.createElement('td')
 
-    search = document.getElementById('#plant-filters').value
-    criteria.push(search)
+        tdName.innerHTML = plant
+        tdFilters.innerHTML = filters
+
+        trPlant.appendChild(tdName)
+        trPlant.appendChild(tdFilters)
+    
+        plantTable.appendChild(trPlant)
+    }
 }
 
-// filter results of search
-// work in progress
-function filterPlantsHandler(event) {
-    event.preventDefault()
-
-    let filtered = plants[0].filter(plant => criteria.test(plant))
-
-    displayPlants(filtered)
+// plant search by name
+const searchPlantsByName = () =>  {
+    let input = document.getElementById('userInputName')
+    let filter = input.value.toUpperCase()
+    let table = document.getElementById('plantTable')
+    let tr = table.getElementsByTagName('tr')
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (let i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName('td')[0]
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = ''
+            } 
+            else {
+                tr[i].style.display = 'none'
+            }
+        }
+    }
 }
 
-// display results of search
-// work in progress
-const displayPlants = (filtered) => {
-    resultsEl.innerHTML = filtered
+// plant search by filters
+const searchPlantsByFilters = () =>  {
+    let input = document.getElementById('userInputFilter')
+    let filter = input.value.toUpperCase()
+    let table = document.getElementById('plantTable')
+    let tr = table.getElementsByTagName('tr')
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (let i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName('td')[1]
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = ''
+            } 
+            else {
+                tr[i].style.display = 'none'
+            }
+        }
+    }
+}
+
+// plant search by buttons
+const searchPlantsByButtons = (button) =>  {
+    let input = button
+    let filter = input.toUpperCase()
+    let table = document.getElementById('plantTable')
+    let tr = table.getElementsByTagName('tr')
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (let i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName('td')[1]
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = ''
+            } 
+            else {
+                tr[i].style.display = 'none'
+            }
+        }
+    }
+}
+
+// reset table for new button search 
+const resetSearch = () => {
+    let table = document.getElementById('plantTable')
+    let tr = table.getElementsByTagName('tr')
+
+    for (let i = 0; i < tr.length; i++) {
+        tr[i].style.display = ''
+    }
 }
 
 // call getPlants to store data
 getPlants()
-  
-document.querySelector('.plant-filter').addEventListener('click', searchCriteriaHandler)
-document.querySelector('.search-plant').addEventListener('click', filterPlantsHandler)
