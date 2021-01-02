@@ -1,22 +1,22 @@
 <section>
-    <div class="post card">
-        <div class="card-header">
-            <h2>Todays Plants</h2>
-        </div>
-        <div class="card">
-            
-            <ol>
-                {{#each plants as |plant|}}
-                <li>
-                    {{> plants plant}}
-                    <a href="/plants/{{id}}">More Info</a>
-                </li>
-                {{/each}}
-            </ol>
+    <div class="container">
+        <h2>Todays Plants</h2>
+        {{!-- <div class="card-header">
+        </div> --}}
+        <div class="row">
+
+
+            {{#each plants as |plant|}}
+
+            {{> plants plant}}
+            {{!-- <a href="/plants/{{id}}">More Info</a> --}}
+
+            {{/each}}
+
         </div>
     </div>
 
-    <div class="post card">
+    {{!-- <div class="post card">
         <div class="card-header">
             <div class="new-plant-form">
                 <h2>Search for a plant based on your environment!</h2>
@@ -45,7 +45,7 @@
                 </table> 
             </div>
         </div>
-    </div>
+    </div> --}}
 </section>
 
 <script src="/javascript/add-plant.js"></script>
