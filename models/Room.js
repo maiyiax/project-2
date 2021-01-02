@@ -25,7 +25,10 @@ Room.init(
         // }
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
     },
     {
@@ -37,4 +40,4 @@ Room.init(
     }
 )
 
-module.exports = Room
+module.exports = Room;

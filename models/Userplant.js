@@ -13,7 +13,6 @@ Userplant.init(
         },
         plant_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'plant',
                 key: 'id'
@@ -21,12 +20,25 @@ Userplant.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
             }
         }
+        // home_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'home',
+        //         key: 'id'
+        //     }
+        // },
+        // room_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'room',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         sequelize,
