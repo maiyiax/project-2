@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
     })
         .then(dbUserData => {
             const userData = dbUserData.map(data => data.get({ plain: true }));
-            console.log(userData);
+            // console.log(userData);
             res.render('dashboard', { userData, loggedIn: true });
         })
         .catch(err => {
@@ -64,6 +64,7 @@ router.get('/more-info/:id', (req, res) => {
             }
 
             const plant = dbPlantData.get({ plain: true })
+            console.log(plant);
             res.render('editPlant', {
                 plant,
                 loggedIn: true

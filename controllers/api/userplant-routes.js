@@ -42,6 +42,10 @@ router.get('/:id', (req, res) => {
         },
         include: [
             {
+                model: Home,
+                attributes: ['id', 'home_name', 'user_id']
+            },
+            {
                 model: Plant,
                 attributes: [ 
                     'id',

@@ -8,7 +8,7 @@
                 {{#each userData as |plant|}}
                 <li>
                     {{> userplants plant}}
-                    <a href="/dashboard/more-info/{{plant.id}}">More Info</a>
+                    <a href="/dashboard/more-info/{{plant_id}}">More Info</a>
                 </li>
                 <button type="button" class="btn" id="deletePlant">Remove this Plant</button>
                 {{/each}}
@@ -28,17 +28,31 @@
         </div>
     </div>
 
-{{!-- Form to add home --}}
+    {{!-- Form to add home --}}
 
     <div class="post card" id="homeForm">
         <div class="card-header">
             <h2>Create New Home</h2>
         </div>
-        <form id="new-post-form" class="card-body">
+        <form id="new-home-form" class="card-body">
             <label class="form-label" for="home-name">Home Name</label>
             <input type="text" name="home-name" class="form-input" />
 
             <button type="submit" class="btn" id="createHomeButton">Create</button>
+        </form>
+    </div>
+
+    {{!-- if user created a home, allow option to add rooms --}}
+
+    <div class="post card" id="roomForm">
+        <div class="card-header">
+            <h2>Add a Room</h2>
+        </div>
+        <form id="new-room-form" class="card-body">
+            <label class="form-label" for="room-name">Home Name</label>
+            <input type="text" name="room-name" class="form-input" />
+
+            <button type="submit" class="btn" id="addRoomButton">Add</button>
         </form>
     </div>
 
