@@ -391,6 +391,10 @@
     text-align: center;
   }
 
+  .description-title {
+    background-color: var(--aqua);
+  }
+
   .suggested-plants {
     width: 32%;
     margin: 5px;
@@ -410,7 +414,12 @@
   .link-styling {
     text-decoration: none;
   }
-  
+
+  .add-plant {
+    flex-direction: row;
+    max-height: 120px;
+  }
+
   /* col-sm */
   @media screen and (min-width: 640px) {
     .col-sm-1 {

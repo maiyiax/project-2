@@ -23,7 +23,8 @@ router.get('/', (req, res) => {
                     'description',
                     'care_level',
                     'toxicity',
-                    'water'
+                    'water',
+                    'filters'
                 ]
             },
         ]
@@ -53,7 +54,8 @@ router.get('/more-info/:id', (req, res) => {
             'description',
             'care_level',
             'toxicity',
-            'water'
+            'water',
+            'filters'
         ]
     })
     .then(dbPlantData => {
