@@ -53,6 +53,10 @@ Plant.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        filters: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
