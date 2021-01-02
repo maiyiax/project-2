@@ -164,7 +164,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 2,
         water: 'weekly',
-        filters: 'Toxic, Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Intermediate, Light Water, Dry Environment'
     },
     {
         common_name: "Marble Queen Pothos",
@@ -175,7 +175,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 2,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Beginners, Light Water, Warm Environment'
     },
     {
         common_name: 'Rubber Tree Plant',
@@ -186,7 +186,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'monthly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Intermediate, Moderate Water, Dry Environment'
     },
     {
         common_name: 'Amaryllis',
@@ -197,7 +197,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Direct Sunlight, Beginners, Moderate Water'
     },
     {
         common_name: 'Wax Plant',
@@ -208,7 +208,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Medium Sunlight, Intermediate, Light Water, Humid Environment'
     },
     {
         common_name: 'Sensitive Plant',
@@ -219,7 +219,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 4,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Intermediate, Light Water, Humid Environment'
     },
     {
         common_name: 'Boston Fern',
@@ -230,7 +230,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'twice-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Medium Sunlight, Pros, Light Water, Cool Environment'
     },
     {
         common_name: 'Moth Orchid',
@@ -241,7 +241,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 2,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Intermediate, Light Water, Dry Environment'
     },
     {
         common_name: 'Boat Orchids',
@@ -252,10 +252,10 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Medium Sunlight, Pros, Moderate Water, Humid Environment'
     },
     {
-        common_name: 'Baby Rubberplant',
+        common_name: 'Baby Rubber Plant',
         scientific_name: 'Peperomia Obtusifolia',
         image_url: 'https://uaelandscapes.com/wp-content/uploads/2020/06/Peperomia-obtusifolia-Baby-Rubber-Plant3.jpg?v=1593184611',
         description: 'There are over 1000 varieties of peperomia plants and most are native to Central and South America. All peperomia plants, which belong to the Pepper Family, are semi- succulents with very similar care requirements. The leaves, thick and plump, rippled, smooth, or shiny, can be various shades of green, red, gray, and cream. The pattern on the leaves may be marbled, striped, or a solid color. Peperomia plant flowers are tiny and inconsequential, growing in clusters on upright conical spikes. When small, peperomia houseplants can be used in dish gardens and terrariums. Indoors, mature peperomia plants never grow taller than 12”-18″ and are ideal for tables. Some varieties make excellent hanging plants. The most popular peperomias used as indoor house plants are the caperata and the obtusifolia varieties.',
@@ -263,7 +263,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Intermediate, Light Water, Humid Environment'
     },
     {
         common_name: 'Heartleaf Philodendron',
@@ -274,7 +274,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 2,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Low Sunlight, Beginners, Moderate Water, Dry Environment'
     },
     {
         common_name: 'Prayer Plant',
@@ -285,7 +285,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'twice-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Low Sunlight, Pros, Light Water, Dry Environment'
     },
     {
         common_name: 'Split Leaf Philodendron',
@@ -296,7 +296,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: ,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Medium Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: 'Snake Plant',
@@ -307,7 +307,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 2,
         water: 'monthly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Low Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: 'Arboricola',
@@ -318,10 +318,10 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Light Water, Humid Environment'
     },
     {
-        common_name: 'Gloxina',
+        common_name: 'Gloxinia',
         scientific_name: 'Sinningia speciosa',
         image_url: 'https://www.po.flowerscanadagrowers.com/uploads/2011/10/6245_50.jpg',
         description: 'A perennial bulb, and relative of African violets, gloxina is often grown as a potted houseplant that can be taken outside in the summer.  They have ovate velvety green leaves that form a basal rosette.  They need bright indoor light with no direct sunlight and constant moisture.  It will bloom in the spring after which cut the leaves back to the first two leaves to encourage a second bloom. ',
@@ -329,7 +329,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 1,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Intermediate, Light Water'
     },
     {
         common_name: 'Peace Lily',
@@ -340,7 +340,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 1,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Low Sunlight, Intermediate, Light Water, Humid Environment'
     },
     {
         common_name: 'Madagascar Jasmine',
@@ -351,7 +351,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 4,
         water: 'twice-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Pros, Moderate Water, Humid Environment'
     },
     {
         common_name: 'Cape Primrose',
@@ -362,7 +362,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Low Sunlight, Intermediate, Light Water, Cool Environment'
     },
     {
         common_name: 'Wandering Jew',
@@ -373,10 +373,10 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Pros, Light Water, Dry Environment'
     },
     {
-        common_name: 'Chinese money Plant',
+        common_name: 'Chinese Money Plant',
         scientific_name: 'Pilea peperomioides',
         image_url: 'https://s7d1.scene7.com/is/image/terrain/46197901_000_a?$zoom2$',
         description: 'Having a superficial resemblance to pennyworts and growing 30 cm (12 in) tall and wide, it is an erect, evergreen perennial, with round, dark green, peltate leaves up to 10 cm in diameter on a long petiole. The stem axis is greenish to dark brown, usually simple, often upright straight, slightly lignified at the base. In poor growing conditions, the plants lose their leaves in the lower part of the branch axis and thereby assume a very distinctive habit. The plants are completely hairless. Striking are their large, circular, shiny, leaves, which can have a diameter of over 15 centimeters.',
@@ -384,7 +384,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Beginners, Light Water, Cool Environment'
     },
     {
         common_name: 'Satin Pothos',
@@ -395,7 +395,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Light Water, Humid Environment'
     },
     {
         common_name: 'Yucca',
@@ -406,7 +406,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: 'Aloe vera',
@@ -417,7 +417,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Moderate Water, Warm Environment'
     },
     {
         common_name: 'Prickly Pear',
@@ -428,7 +428,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 4,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Intermediate, Light Water, Dry Environment'
     },
     {
         common_name: 'Christmas Cactus',
@@ -439,7 +439,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Low Sunlight, Beginners, Light Water, Warm Environment'
     },
     {
         common_name: 'Moon Cactus',
@@ -450,7 +450,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 2,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: 'Jade Plant',
@@ -461,7 +461,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Beignners, Moderate Water, Cool Environment'
     },
     {
         common_name: 'Echeveria',
@@ -472,7 +472,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 4,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Medium Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: 'English Ivy',
@@ -483,7 +483,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: 'Strawberry Begonia',
@@ -494,7 +494,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Light Water, Cool Environment'
     },
     {
         common_name: "Azalea",
@@ -505,7 +505,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'twice-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Low Sunlight, Beginners, Light Water, Cool Environment'
     },
     {
         common_name: "Baby's Tear's Plant",
@@ -516,7 +516,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'twice-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Pros, Moderate Water, Cool Environment'
     },
     {
         common_name: "Bird of Paradise",
@@ -527,7 +527,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 4,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Pros, Moderate Water, Warm Environment'
     },
     {
         common_name: "Bleeding-Heart Vine",
@@ -538,7 +538,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Direct Sunlight, Intermediate, Moderate Water, Warm Environment'
     },
     {
         common_name: "Guzmania",
@@ -549,7 +549,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 2,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Low Sunlight, Beginners, Light Water, Humid Environment'
     },
     {
         common_name: "Calla Lily",
@@ -560,7 +560,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'daily',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Intermeidate, Light Water, Warm Environment'
     },
     {
         common_name: "Cat Palm",
@@ -571,18 +571,18 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Pros, Moderate Water, Warm Environment'
     },
     {
-        common_name: "Chrysanthemums",
-        scientific_name: "Chrysanthemums",
+        common_name: "Chrysanthemum",
+        scientific_name: "Chrysanthemum",
         image_url: 'https://plantingman.com/wp-content/uploads/2017/02/Chrysantheium-plant.jpg',
         description: 'A Chrysanthemum is really an outdoor plant that has become a popular floral gift and flowering plant for home and office. It is second only to the rose as the most popular cut flower in the world. Mums are members of the Asteraceae Family which includes over 20,000 flowering species. Chrysanthemums were brought to Japan by Buddhist Monks in 400 AD and have remained a very important part of Japanese culture to this day. Mums last 3-4 weeks indoors with very little care and in almost any environment before needing to be replaced. The blooms which come in various shapes and colors can be daisy-like, pom-poms, or buttons, and may be yellow, burgundy, pink, or white. NASA has listed the Chrysanthemum as a plant that cleans the air of benzene, formaldehyde, and carbon monoxide. You may also enjoy sipping Chrysanthemum tea to relax.',
         care_level: 'easy',
         toxicity: 1,
         // light_id: ,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Moderate Water, Dry Environment'
     },
     {
         common_name: "Cineraria",
@@ -593,7 +593,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Pros, Light Water, Dry Environment'
     },
     {
         common_name: "Kaffir Lily",
@@ -604,7 +604,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Direct Sunlight, Beginners, Light Water, Warm Environment'
     },
     {
         common_name: "Coleus",
@@ -615,10 +615,10 @@ const plantdata = [
         toxicity: 0,
         // light_id: 4,
         water: 'twice-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Intermediate, Light Water, Warm Environment'
     },
     {
-        common_name: "Brazilian Snow Plant ",
+        common_name: "Brazilian Snow Plant",
         scientific_name: "Ctenanthe Lubbersiana",
         image_url: 'https://plantingman.com/wp-content/uploads/2019/05/Ctenanthe-lubbersiana-%E2%80%98Golden-mosaic%E2%80%99.jpg',
         description: 'Ctenanthe, native to tropical Brazil, is a member of the Marantaceae family and is related to the calathea and prayer plant. These evergreen perennials are grown primarily for the beauty of their colorful leaves. C. lubbersiana reaches a height of about 18 inches and has green and yellow patterned elliptical leaves with pale green undersides. A Ctenanthe is not an easy care plant and can be quite frustrating for a novice plant grower.',
@@ -637,7 +637,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Direct Sunlight, Beginners, Light Water, Warm Environment'
     },
     {
         common_name: "Donkey's Tail",
@@ -648,7 +648,7 @@ const plantdata = [
         toxicity: 0,
         // light_id: 4,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Pet Friendly, Direct Sunlight, Beginners, Light Water, Dry Environment'
     },
     {
         common_name: "Emerald Gem",
@@ -659,10 +659,10 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Medium Sunlight, Pros, Moderate Water, Warm Environment'
     },
     {
-        common_name: "Paperplant",
+        common_name: "Paper Plant",
         scientific_name: "Fatsia Japonica",
         image_url: 'https://cdn.shopify.com/s/files/1/0253/6701/9565/products/Fatsia-Japonica-Camoflauge-11_1000x1000.jpg?v=1606044970',
         description: 'The fatsia japonica plant, or Japanese aralia, originated in the sub-tropic forests of Japan, Korea, & Taiwan. Fatsia plants are a type of evergreen plant that can be grown both indoors as a houseplant and outdoors in frost-free areas. A fatsia plant has shiny, leathery, medium green palmate (hand-shaped) leaves that grow at the ends of stiff stems. Fatsia plants are compact upright plants that can grow up to 6ft. tall even indoors. Prune a fatsia aggressively to help keep the growth under control and the shape attractive.',
@@ -670,10 +670,10 @@ const plantdata = [
         toxicity: 0,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Intermediate, Moderate Water, Warm Environment'
     },
     {
-        common_name: "Fiddle leaf fig",
+        common_name: "Fiddle leaf Fig",
         scientific_name: "Ficus lyrata",
         image_url: 'https://i.pinimg.com/originals/5e/38/79/5e3879e4af262bbd7c5658485fb20e61.jpg',
         description: 'A Ficus Lyrata, or as it’s commonly called a Fiddle Leaf Fig plant, has large wide leathery leaves that resemble a violin or fiddle. These dark green, hard leaves are over a foot long  and grow on woody stems. The Ficus Lyrata, native to Australia, Melanesia, and Southern Asia, is one of the easier ficus trees to care for. It can be small enough to use as a table plant or large enough to be used as an indoor tree.',
@@ -681,7 +681,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'bi-weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Pros, Moderate Water, Warm Environment'
     },
     {
         common_name: "Lucky Bamboo",
@@ -692,10 +692,10 @@ const plantdata = [
         toxicity: 1,
         // light_id: 2,
         water: 'monthly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Medium Sunlight, Beginners, Moderate Water, Warm Environment'
     },
     {
-        common_name: "Moses in the cradle",
+        common_name: "Moses In The Cradle",
         scientific_name: "Tradescantia spathacea",
         image_url: 'https://www.logees.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/1/r1934-4-large.jpg',
         description: 'Moses in the Cradle plants (Tradescantia spathacea) have many alternative names such as Moses-in-a-Boat, Boat Lily, Cradle Lily, Moses-in-the-Bullrushes, and Oyster plant. Whatever you want to call them, these colorful plants, native to Mexico, the West Indies, and Central America, are easy to care for and have very attractive leaves. Moses In the Cradle plants produce rosettes of long, waxy, sword-shaped leaves that are glossy green or green, purple, and white striped on top and a rich purple on the underside. The very small white flowers, tucked away in a purple boat shaped bract, give Moses-in-the-Cradle Houseplants their many common names.',
@@ -703,7 +703,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 4,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Toxic, Direct Sunlight, Beginners, Light Water, Humid Environment'
     },
     {
         common_name: "Poinsettia",
@@ -714,7 +714,7 @@ const plantdata = [
         toxicity: 1,
         // light_id: 3,
         water: 'weekly',
-        filters: 'Direct Sunlight, Pros, Light Water, Humid Environment'
+        filters: 'Direct Sunlight, Beginners, Light Water, Warm Environment'
     }
 ]
 

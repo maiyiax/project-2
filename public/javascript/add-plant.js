@@ -34,6 +34,7 @@ async function addPlantToDashboard(event) {
 
     const plant = document.getElementById('select');
     const plant_id = plant.options[plant.selectedIndex].value;
+    console.log(plant_id)
 
     // post to dashboard
     const response = await fetch(`/api/userplants`, {
