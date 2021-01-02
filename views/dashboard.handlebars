@@ -8,30 +8,32 @@
         </div>
     </div>
 
-    <div class="post card" id="plantForm">
-        <div class="card-header">
-            <div class="new-plant-form">
+    <div class="flex-row-1">
+        <div class="card" id="plantForm">
+            <div class="card-header">
                 <h2>Add a plant</h2>
+            </div>
+            <div class="card-body">
                 <select id="select">
                     <option value="default">Choose a Plant</option>
                 </select>
                 <button type="button" class="btn" id="addPlant">Add Plant</button>
             </div>
         </div>
-    </div>
 
-{{!-- Form to add home --}}
+    {{!-- Form to add home --}}
 
-    <div class="post card" id="homeForm">
-        <div class="card-header">
-            <h2>Create New Home</h2>
+        <div class="post card" id="homeForm">
+            <div class="card-header">
+                <h2>Create New Home</h2>
+            </div>
+            <form id="new-post-form" class="card-body">
+                <label class="form-label" for="home-name">Home Name</label>
+                <input type="text" name="home-name" class="form-input" />
+
+                <button type="submit" class="btn" id="createHomeButton">Create</button>
+            </form>
         </div>
-        <form id="new-post-form" class="card-body">
-            <label class="form-label" for="home-name">Home Name</label>
-            <input type="text" name="home-name" class="form-input" />
-
-            <button type="submit" class="btn" id="createHomeButton">Create</button>
-        </form>
     </div>
 
 </section>
