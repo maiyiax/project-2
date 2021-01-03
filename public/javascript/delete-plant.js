@@ -29,5 +29,3 @@ async function deletePlantDashboard(plant) {
         alert(response.statusText);
     }
 }
-  
-document.querySelector('#deletePlant').addEventListener('click', deletePlantHandler)

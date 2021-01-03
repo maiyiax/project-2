@@ -24,4 +24,3 @@ async function editRoomHandler(event) {
     }
 }
   
-document.querySelector('.edit-room-form').addEventListener('submit', editRoomHandler)

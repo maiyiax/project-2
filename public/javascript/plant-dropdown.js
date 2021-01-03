@@ -28,33 +28,3 @@ const populateDropdown = (plants) => {
 }
 
 getPlants()
-
-// generate dropdown for rooms
-// const roomOptions = document.getElementById("roomList");
-
-// const getRooms = () => {
-//     fetch(`/api/rooms`)
-//         .then((response) => {
-//             if (response.ok) {
-//                 response.json()
-//                     .then((roomData) => {
-//                         populateRooms(roomData)
-//                     })
-//             }
-//         })
-//         .catch(err => console.log(err));
-// };
-
-// const populateRooms = (rooms) => {
-//     for (let a = 0; a < rooms.length; a++) {
-//         let opt = rooms[a].room_name;
-//         let val = rooms[a].id;
-//         let el = document.createElement("option");
-//         el.text = opt;
-//         el.value = val;
-
-//         roomOptions.add(el);
-//     }
-// };
-
-// getRooms();

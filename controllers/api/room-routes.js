@@ -24,7 +24,8 @@ router.get('/', (req, res) => {
                             'description',
                             'care_level',
                             'toxicity',
-                            'water'
+                            'water',
+                            'filters'
                         ]
                     }
                 ]
@@ -64,7 +65,8 @@ router.get('/:id', (req, res) => {
                             'description',
                             'care_level',
                             'toxicity',
-                            'water'
+                            'water',
+                            'filters'
                         ]
                     }
                 ]
