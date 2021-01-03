@@ -6,24 +6,40 @@ This application uses Node.js and Express.js to create a RESTful api that helps 
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
-* [Technology](#technology)
+* [Dependencies](#dependencies)
+* [Screenshot](#screenshot)
 * [Developments](#developments)
 * [Contributors](#contributors)
 
 
 ## Installation
 
-If you wish to run this application locally, clone this repository by running `git clone https://github.com/rpajewski/cms-style-blog-site.git` . Then run `npm install` to install the node packages required to run the application. Additionally, you will need a mysql user login to create the database for seeding the plant information. Once the database is created and seeded, run the application with `npm start` and open in your localhost server to start using the application.
+If you wish to run this application locally, clone this repository by running `git clone https://github.com/rpajewski/cms-style-blog-site.git` . Then run `npm install` to install the dependencies required to run the application. Additionally, you will need a mysql user login to create the database for seeding the plant information. Once the database is created and seeded, run the application with `npm start` and open in your localhost server to start using the application.
 
-The application can also be used at the deployed link on Heroku: ![]()
+The application can also be used at the deployed link on [Heroku]().
 
+## Dependencies
 
-## Technology
+   - [bcrypt](https://www.npmjs.com/package/bcrypt)
+   - [bootstrap](https://getbootstrap.com/)
+   - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+   - [dotenv](https://www.npmjs.com/package/dotenv)
+   - [express](https://www.npmjs.com/package/express)
+   - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+   - [express-session](https://www.npmjs.com/package/express-session)
+   - [mysql2](https://www.npmjs.com/package/mysql2)
+   - [sequelize](https://www.npmjs.com/package/sequelize)
+   
+## Screenshot
+
+- Homepage 
+<br>
+
+![](./public/images/homepage.png)
 
 ## Developments
 
-Plans for future developments include the following:
+- Plans for future developments include the following:
     - Include functionality to assign lighting to rooms. Plants can then be matched to each room based on the light setting in order to determine the best plant suited for that room.
     - Include functionality for a plant watering schedule. Based on the filters you've set on your plant, and the last time you've watered them, we would like for the application to have the ability to send notifications when it is time to water your plants.
     - Increase the plant database to include more plants than just common houseplants.
