@@ -21,23 +21,9 @@
             </div>
         </div>
 
-        {{!-- Form to add home --}}
-
-        <div class="post card" id="homeForm">
-            <div class="card-header">
-                <h2>Create New Home</h2>
-            </div>
-            <form id="new-post-form" class="card-body">
-                <label class="form-label" for="home-name">Home Name</label>
-                <input type="text" name="home-name" class="form-input" />
-
-                <button type="submit" class="btn" id="createHomeButton">Create</button>
-            </form>
-        </div>
-    </div>
 
     {{!-- if user created a home, allow option to add rooms --}}
-
+    {{!-- {{#if}} add if conditions --}}
     <div class="post card" id="roomForm">
         <div class="card-header">
             <h2>Add a Room</h2>
@@ -50,6 +36,22 @@
             </form>
             <button type="submit" class="btn" id="addRoomButton">Add Room</button>
         </div>
+    </div>
+
+        {{!-- Form to add home --}}
+    {{!-- {{else}} --}}
+        <div class="post card" id="homeForm">
+            <div class="card-header">
+                <h2>Create New Home</h2>
+            </div>
+            <form id="new-post-form" class="card-body">
+                <label class="form-label" for="home-name">Home Name</label>
+                <input type="text" name="home-name" class="form-input" />
+
+                <button type="submit" class="btn" id="createHomeButton">Create</button>
+            </form>
+        </div>
+        {{!-- {{/if}} --}}
     </div>
 
 </section>
