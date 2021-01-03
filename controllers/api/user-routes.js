@@ -28,7 +28,8 @@ router.get('/', (req, res) => {
                             'description',
                             'care_level',
                             'toxicity',
-                            'water'
+                            'water',
+                            'filters'
                         ]
                     }
                 ]

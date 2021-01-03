@@ -104,4 +104,8 @@ Userplant.belongsTo(Room, {
     onDelete: 'SET NULL'
 });
 
+Room.belongsTo(Userplant, {
+    foreignKey: 'user_id'
+})
+
 module.exports = { User, Plant, Room, Home, Userplant };

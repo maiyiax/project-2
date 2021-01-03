@@ -15,5 +15,3 @@ async function deleteHomeHandler(event) {
         alert(response.statusText);
     }
 }
-  
-document.querySelector('.delete-home-btn').addEventListener('click', deleteHomeHandler)

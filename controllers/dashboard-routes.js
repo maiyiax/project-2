@@ -11,7 +11,15 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Home,
-                attributes: ['id', 'home_name', 'user_id']
+                attributes: ['id', 'home_name', 'user_id'],
+                include: {
+                    model: Room,
+                    attributes: ['id', 'room_name', 'user_id']
+                }
+            },
+            {
+                model: Room,
+                attributes: ['id', 'room_name', 'user_id']
             },
             {
                 model: Plant,
@@ -31,8 +39,22 @@ router.get('/', (req, res) => {
     })
         .then(dbUserData => {
             const userData = dbUserData.map(data => data.get({ plain: true }));
-            // console.log(userData);
-            res.render('dashboard', { userData, loggedIn: true });
+            const homeData = userData.flat(1)
+            const home_name = []
+
+            console.log(userData)
+            if (homeData.length) {
+                if (homeData[0].home) {
+                    home_name.push(userData[0].home.home_name)
+                    res.render('dashboard', { userData, home_name, loggedIn: true });
+                }
+                else {
+                    res.render('dashboard', { userData, loggedIn: true });
+                }
+            }
+            else {
+                res.render('dashboard', { userData, loggedIn: true });
+            }
         })
         .catch(err => {
             console.log(err);
@@ -63,7 +85,6 @@ router.get('/more-info/:id', (req, res) => {
             res.status(404).json({ message: 'No plant found with this id!' })
             return
         }
-        
         const plant = dbPlantData.get({ plain: true })
         res.render('editPlant', {
             plant,
