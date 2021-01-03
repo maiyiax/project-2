@@ -39,7 +39,7 @@ Room.hasMany(Plant, {
 });
 
 Room.hasMany(Userplant, {
-    foreignKey: 'room_id'
+    foreignKey: 'user_id'
 });
 
 // User

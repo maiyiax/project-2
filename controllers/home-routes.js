@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
             'description',
             'care_level',
             'toxicity',
-            'water'
+            'water',
+            'filters'
         ],
     })
     .then(dbPlantData => {
@@ -27,7 +28,7 @@ router.get('/', (req, res) => {
             randomPlantsArray.push(randomPlants);
         }
         const plants = randomPlantsArray.flat(1)
-        console.log(plants)
+        // console.log(plants)
         res.render('homepage', {
             plants,
             data,
@@ -63,7 +64,8 @@ router.get('/plants/:id', (req, res) => {
             'description',
             'care_level',
             'toxicity',
-            'water'
+            'water',
+            'filters'
         ]
     })
     .then(dbPlantData => {

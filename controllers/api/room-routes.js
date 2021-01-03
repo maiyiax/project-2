@@ -1,25 +1,34 @@
 const router = require('express').Router();
-const { User, Plant, Room } = require('../../models');
+const { User, Plant, Room, Userplant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all rooms
 router.get('/', (req, res) => {
     Room.findAll({
-        attributes: ['id', 'room_name'],
+        attributes: ['id', 'room_name', 'user_id'],
         // include plants in this room?
         include: [
             {
-                model: Plant,
+                model: Userplant,
                 attributes: [
-                    'id',
-                    'common_name',
-                    'scientific_name',
-                    'image_url',
-                    'description',
-                    'care_level',
-                    'toxicity',
-                    'water'
+                    'id', 'plant_id', 'user_id'
+                ],
+                include: [
+                    {
+                        model: Plant,
+                        attributes: [
+                            'id',
+                            'common_name',
+                            'scientific_name',
+                            'image_url',
+                            'description',
+                            'care_level',
+                            'toxicity',
+                            'water'
+                        ]
+                    }
                 ]
+                
             }
         ]
     })
@@ -36,21 +45,30 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'room_name'],
+        attributes: ['id', 'room_name', 'user_id'],
         // include plants in this room?
         include: [
             {
-                model: Plant,
+                model: Userplant,
                 attributes: [
-                    'id',
-                    'common_name',
-                    'scientific_name',
-                    'image_url',
-                    'description',
-                    'care_level',
-                    'toxicity',
-                    'water'
+                    'id', 'plant_id', 'user_id'
+                ],
+                include: [
+                    {
+                        model: Plant,
+                        attributes: [
+                            'id',
+                            'common_name',
+                            'scientific_name',
+                            'image_url',
+                            'description',
+                            'care_level',
+                            'toxicity',
+                            'water'
+                        ]
+                    }
                 ]
+                
             }
         ]
 
@@ -72,7 +90,8 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     // expects {room_name: 'bedroom'}
     Room.create({
-        room_name: req.body.room_name
+        room_name: req.body.room_name,
+        user_id: req.session.user_id
     })
         .then(dbRoomData => res.json(dbRoomData))
         .catch(err => {

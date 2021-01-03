@@ -26,7 +26,7 @@ const populatePlants = (plants) => {
         let tdName = document.createElement('td')
         let tdFilters = document.createElement('td')
 
-        tdName.innerHTML = `<a href="${plantURL}"><p class="link-styling">${plant}</p></a>`
+        tdName.innerHTML = `<a class="link-styling" href="${plantURL}"><p>${plant}</p></a>`
         tdFilters.innerHTML = filters
 
         trPlant.appendChild(tdName)

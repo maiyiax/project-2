@@ -1,26 +1,19 @@
 const router = require('express').Router()
-const { User, Plant, Room, Userplant } = require('../../models')
+const { User, Plant, Room, Userplant, Home } = require('../../models')
 
 // get users
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password'] }
-    })
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
-})
-
-// get one users
-router.get('/:id', (req, res) => {
-    User.findOne({
         attributes: { exclude: ['password'] },
-        where: {
-            id: req.params.id
-        },
         include: [
+            {
+                model: Home,
+                attributes: ['id', 'home_name', 'user_id'],
+            },
+            {
+                model: Room,
+                attributes: ['id', 'room_name']
+            },
             {
                 model: Userplant,
                 attributes: ['id', 'plant_id', 'user_id'],
@@ -40,23 +33,50 @@ router.get('/:id', (req, res) => {
                     }
                 ]
             },
+        ]
+    })
+    .then(dbUserData => res.json(dbUserData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
+
+// get one users
+router.get('/:id', (req, res) => {
+    User.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+            id: req.params.id
+        },
+        include: [
             {
-                model: Plant,
-                attributes: [
-                    'id',
-                    'common_name',
-                    'scientific_name',
-                    'image_url',
-                    'description',
-                    'care_level',
-                    'toxicity',
-                    'water'
-                ],
+                model: Home,
+                attributes: ['id', 'home_name', 'user_id'],
             },
             {
                 model: Room,
                 attributes: ['id', 'room_name']
-            }
+            },
+            {
+                model: Userplant,
+                attributes: ['id', 'plant_id', 'user_id'],
+                include: [
+                    {
+                        model: Plant,
+                        attributes: [ 
+                            'id',
+                            'common_name',
+                            'scientific_name',
+                            'image_url',
+                            'description',
+                            'care_level',
+                            'toxicity',
+                            'water'
+                        ]
+                    }
+                ]
+            },
         ]
     })
     .then(dbUserData => {
