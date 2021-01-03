@@ -1,27 +1,10 @@
 <section>
-<<<<<<< HEAD
-    <div class="post card">
-        <div class="card-header">
-            <h2>Your Plants</h2>
-        </div>
-        <div class="card-body">
-            <ol>
-                {{#each userData as |plant|}}
-                <li>
-                    {{> userplants plant}}
-                    <a href="/dashboard/more-info/{{plant_id}}">More Info</a>
-                </li>
-                <button type="button" class="btn" id="deletePlant">Remove this Plant</button>
-                {{/each}}
-            </ol>
-=======
     <div>
         <h2>Your Plants</h2>
         <div class="flex-row-1">
             {{#each userData as |plant|}}
             {{> userplants plant}}
             {{/each}}
->>>>>>> develop
         </div>
     </div>
 
@@ -56,13 +39,27 @@
     <div class="post card" id="roomForm">
         <div class="card-header">
             <h2>Add a Room</h2>
+            <select id="roomList">
+                <option value="default">Select a Room</option>
+            </select>
+            <select id="lightingList">
+                <option value="default">Select Room Lighting</option>
+            </select>
+            <select id="homelist">
+                <option value="default">Choose a Room</option>
+            </select>
+            <button type="submit" class="btn" id="addRoomButton">Add</button>
         </div>
-        <form id="new-room-form" class="card-body">
-            <label class="form-label" for="room-name">Home Name</label>
+        {{!-- <form id="new-room-form" class="card-body">
+            <label class="form-label" for="room-name">Room Name</label>
             <input type="text" name="room-name" class="form-input" />
+            <label class="form-label" for="light-level">Light level</label>
+            <input type="text" name="light-level" class="form-input" />
+            <label class="form-label" for="home-id">Home ID</label>
+            <input type="text" name="home-id" class="form-input" />
 
             <button type="submit" class="btn" id="addRoomButton">Add</button>
-        </form>
+        </form> --}}
     </div>
 
 </section>

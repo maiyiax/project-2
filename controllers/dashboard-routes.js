@@ -56,24 +56,6 @@ router.get('/more-info/:id', (req, res) => {
             'water'
         ]
     })
-<<<<<<< HEAD
-        .then(dbPlantData => {
-            if (!dbPlantData) {
-                res.status(404).json({ message: 'No plant found with this id' })
-                return
-            }
-
-            const plant = dbPlantData.get({ plain: true })
-            console.log(plant);
-            res.render('editPlant', {
-                plant,
-                loggedIn: true
-            })
-        })
-        .catch(err => {
-            console.log(err)
-            res.status(500).json(err)
-=======
     .then(dbPlantData => {
         if (!dbPlantData) {
             res.status(404).json({ message: 'No plant found with this id!' })
@@ -84,7 +66,6 @@ router.get('/more-info/:id', (req, res) => {
         res.render('editPlant', {
             plant,
             loggedIn: req.session.loggedIn
->>>>>>> develop
         })
     })
 })
