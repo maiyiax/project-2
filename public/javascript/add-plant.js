@@ -48,3 +48,5 @@ async function addPlantFromInfo(plantID) {
         alert(response.statusText)
     }
 }
+
+document.getElementById('addPlant').addEventListener('click', addPlantToDashboard);
