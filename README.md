@@ -32,8 +32,8 @@ Plans for future developments include the following:
 
 ## Contributors
 * Ricky Pajewski - managed backend processes and connecting the backend to the front end
-    - ![github](https://github.com/rpajewski)
+    - [github](https://github.com/rpajewski)
 * Zach Howell - managed front-end processes
-    - ![github](https://github.com/ZachAH)
+    - [github](https://github.com/ZachAH)
 * Mai Yia Xiong - managed backend processes and databases
-    - ![github](https://github.com/maiyiax)
+    - [github](https://github.com/maiyiax)
