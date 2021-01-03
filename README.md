@@ -4,6 +4,8 @@
 
 This application uses Node.js and Express.js to create a RESTful api that helps you find plants suitable for your home environment. The application allows you to search the database for a list of common houseplants based on the filters you choose. You will also have the option to create a login to start adding plants that you own to your dashboard and view the information stored for that plant.
 
+![application](/public/images/application.gif)
+
 ## Table of Contents
 * [Installation](#installation)
 * [Dependencies](#dependencies)
