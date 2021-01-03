@@ -16,7 +16,7 @@ This application uses Node.js and Express.js to create a RESTful api that helps 
 
 ## Installation
 
-If you wish to run this application locally, clone this repository by running `git clone https://github.com/rpajewski/cms-style-blog-site.git` . Then run `npm install` to install the dependencies required to run the application. Additionally, you will need a mysql user login to create the database for seeding the plant information. Once the database is created and seeded, run the application with `npm start` and open in your localhost server to start using the application.
+If you wish to run this application locally, clone this repository by running `git clone https://github.com/maiyiax/project-2.git` . Then run `npm install` to install the dependencies required to run the application. Additionally, you will need a mysql user login to create the database for seeding the plant information. Once the database is created and seeded, run the application with `npm start` and open in your localhost server to start using the application.
 
 The application can also be used at the deployed link on [Heroku]().
 
